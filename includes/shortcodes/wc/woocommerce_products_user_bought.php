@@ -1,7 +1,7 @@
 <?php
-add_shortcode( 'my_products', 'getbowtied_user_bought_products' );
- 
-function getbowtied_user_bought_products() { 
+add_shortcode( 'my_products', 'nova_user_bought_products' );
+
+function nova_user_bought_products() { 
 	$customer_orders = wc_get_orders( apply_filters( 'woocommerce_my_account_my_orders_query', array( 'customer' => get_current_user_id()) ) );
 	$products_in = array();
 	foreach ( $customer_orders as $customer_order ) :
@@ -28,7 +28,7 @@ function getbowtied_user_bought_products() {
 		while ( $loop->have_posts() ) : $loop->the_post();
 			wc_get_template_part( 'content', 'product' );
 		endwhile;
-	} 
+	}
 	wp_reset_postdata();
 
 	return '<h6>'.__('Your Products', 'woocommerce') .'</h6>'.

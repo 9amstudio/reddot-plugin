@@ -10,7 +10,7 @@ if ( ! function_exists( 'nova_18_gutenberg_register_rest_post_images' ) ) {
         register_rest_field( array('post'),
             'fimg_url',
             array(
-                'get_callback'    => 'gbt_18_th_get_rest_post_featured_image',
+                'get_callback'    => 'nova_18_gutenberg_get_rest_post_featured_image',
                 'update_callback' => null,
                 'schema'          => null,
             )

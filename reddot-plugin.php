@@ -48,7 +48,7 @@ if(!function_exists('github_reddot_plugin_updater')) {
 
 			$config = array(
 				'slug' 				 => plugin_basename(__FILE__),
-				'proper_folder_name' => 'the-hanger-extender',
+				'proper_folder_name' => 'reddot-plugin',
 				'api_url' 			 => 'https://api.github.com/repos/9amstudio/reddot-plugin',
 				'raw_url' 			 => 'https://raw.github.com/9amstudio/reddot-plugin/master',
 				'github_url' 		 => 'https://github.com/9amstudio/reddot-plugin',
@@ -100,7 +100,7 @@ if(!function_exists('nova_reddot_gutenberg_blocks')) {
 }
 
 if( !function_exists('nova_reddot_theme_warning') ) {
-	function gbt_th_theme_warning() {
+	function nova_reddot_theme_warning() {
 
 		?>
 
