@@ -258,7 +258,7 @@
 					'div',
 					{
 						key: 'gbt_18_th_slider_container',
-						className: attributes.fullHeight ? 'shortcode_getbowtied_slider gbt_18_th_slider_container swiper-container full_height' : 'shortcode_getbowtied_slider gbt_18_th_slider_container swiper-container',
+						className: attributes.fullHeight ? 'shortcode_nova_slider gbt_18_th_slider_container swiper-container full_height' : 'shortcode_nova_slider gbt_18_th_slider_container swiper-container',
 						style:
 						{
 							height: attributes.customHeight + 'px'
