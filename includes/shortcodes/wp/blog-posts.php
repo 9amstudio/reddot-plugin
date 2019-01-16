@@ -43,7 +43,7 @@ function getbowtied_shortcode_blog_posts($atts, $content = null) {
 
 							<div class="gbt_shortcode_blog_posts_content">
 								<div class="gbt_shortcode_blog_posts_meta">
-									<?php echo getbowtied_posted_on(); ?>
+									<?php echo nova_posted_on(); ?>
 								</div>
 								<h4 class="gbt_shortcode_blog_posts_title site-secondary-font">
 									<a href="<?php the_permalink(); ?>">
