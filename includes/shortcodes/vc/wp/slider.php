@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 **	SLIDER
@@ -15,7 +15,7 @@ vc_map( array(
 	"content_element" => true,
 	"params" => array(
         // add params same as with any other content element
-	
+
  		array(
 			"type"			=> "dropdown",
  			"holder"		=> "div",
@@ -26,7 +26,7 @@ vc_map( array(
 			"param_name"	=> "full_height",
 			"value"			=> array('Full Height' => 'yes', 'Custom Height' => 'no'),
  		),
-		
+
  		array(
  			"type"			=> "textfield",
  			"holder"		=> "div",
@@ -59,7 +59,7 @@ vc_map( array(
 			'type' => 'checkbox',
 			'param_name' => 'slide_numbers',
 			'heading' => 'Slide Numbers',
-			'std' => 'true'
+			'std' => false,
 		),
 
 		array(
@@ -99,6 +99,16 @@ vc_map( array(
 		),
 
 		array(
+			"type"			=> "textfield",
+			"holder"		=> "div",
+			"class" 		=> "hide_in_vc_editor",
+			"admin_label" 	=> true,
+			"heading"		=> "Subtitle",
+			"param_name"	=> "subtitle",
+			"value"			=> "",
+		),
+
+		array(
 			"type"			=> "textarea",
 			"holder"		=> "div",
 			"class" 		=> "hide_in_vc_editor",
@@ -129,6 +139,16 @@ vc_map( array(
 		),
 
 		array(
+			"type"			=> "colorpicker",
+			"holder"		=> "div",
+			"class" 		=> "hide_in_vc_editor",
+			"admin_label" 	=> true,
+			"heading"		=> "Button Color",
+			"param_name"	=> "button_color",
+			"value"			=> "#232323",
+		),
+
+		array(
 			"type"			=> "textfield",
 			"holder"		=> "div",
 			"class" 		=> "hide_in_vc_editor",
@@ -137,7 +157,7 @@ vc_map( array(
 			"param_name"	=> "button_url",
 			"value"			=> "",
 		),
-		
+
 		array(
 			"type"			=> "colorpicker",
 			"holder"		=> "div",
@@ -145,9 +165,9 @@ vc_map( array(
 			"admin_label" 	=> true,
 			"heading"		=> "Slide Background Color",
 			"param_name"	=> "bg_color",
-			"value"			=> "#000000",
+			"value"			=> "#ffffff",
 		),
-		
+
 		array(
 			"type"			=> "attach_image",
 			"holder"		=> "div",

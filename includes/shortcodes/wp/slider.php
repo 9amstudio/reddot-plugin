@@ -2,136 +2,137 @@
 
 // [slider]
 
-function nova_slider($params = array(), $content = null) {
-	extract(shortcode_atts(array(
-		'full_height' 		  	   	=> 'no',
-		'custom_desktop_height' 	=> '800px',
-		'custom_mobile_height' 	  	=> '600px',
-		'slide_numbers'		  		=> 'false',
-		'slide_numbers_color' 		=> '#000',
-		'slide_style' => 'horizontal'
+function nova_slider( $params = array(), $content = null ) {
+	extract( shortcode_atts( array(
+		'full_height' 		  	  => 'no',
+		'custom_desktop_height' => '800px',
+		'custom_mobile_height' 	=> '600px',
+		'slide_numbers'		  		=> false,
+		'slide_numbers_color' 	=> '#000',
+		'slide_style'           => 'horizontal'
 	), $params));
 
-	if ( $full_height == 'no' && ( !empty($custom_desktop_height) || !empty($custom_mobile_height) ) ) {
+	$GLOBALS['slider_count'] = 0;
+	$GLOBALS['slide_style']  = $slide_style;
+
+	if ( $full_height == 'no' && ( ! empty( $custom_desktop_height ) || ! empty( $custom_mobile_height ) ) ) {
 		$extra_class = '';
 	} else {
 		$extra_class = 'full_height';
 	}
 
-	if ($full_height == 'no' && !empty($custom_desktop_height)) {
-		$desktop_height = 'height:'.$custom_desktop_height.';';
+	if ( $full_height == 'no' && ! empty( $custom_desktop_height ) ) {
+		$desktop_height = 'height:' . $custom_desktop_height . ';';
 	} else {
 		$desktop_height = '';
 	}
 
-	if ($full_height == 'no' && !empty($custom_mobile_height)) {
-		$mobile_height = '@media all and (max-width: 768px){.shortcode_nova_slider{ height:'.$custom_mobile_height.'!important;}}';
+	if ( $full_height == 'no' && ! empty( $custom_mobile_height ) ) {
+		$mobile_height = '@media all and (max-width: 768px){.shortcode_nova_slider{ height:' . $custom_mobile_height . '!important;}}';
 	} else {
 		$mobile_height = '';
 	}
 
-	if($slide_style == 'horizontal'){
-	$nova_slider_images = '
-		<div class="slider__image swiper-container">
-			<div class="swiper-wrapper">
-				<!-- Image 1 -->
-				<div class="swiper-slide">
-					<div class="cover-slider" data-bg="assets/img/image_slider_1.jpg"><a class="swiper-slide__link" href="#"></a></div>
-				</div>
-				<!-- /Image 1 -->
-
-				<!-- Image 2 -->
-				<div class="swiper-slide">
-					<div class="cover-slider" data-bg="assets/img/image_slider_1.jpg"><a class="swiper-slide__link" href="#"></a></div>
-				</div>
-				<!-- /Image 2 -->
-
-				<!-- Image 3 -->
-				<div class="swiper-slide">
-					<div class="cover-slider" data-bg="assets/img/image_slider_1.jpg"><a class="swiper-slide__link" href="#"></a></div>
-				</div>
-				<!-- /Image 3 -->
-			</div>
-		</div>
-		';
-	} else {
-		$nova_slider_images = '';
-	}
+	global $slide_image_data;
+	$slide_image_data = array();
 
 	$nova_slider = '
-
-		<div class="shortcode_nova_slider slider slider-'.$slide_style.' '.$extra_class.'" style="'.$desktop_height.' width: 100%">
+		<div class="shortcode_nova_slider slider-' . $slide_style . ' ' . $extra_class . '" style="' . $desktop_height . ' width: 100%">
 			<div class="slider__caption swiper-container">
 				<div class="swiper-wrapper">
-				'.do_shortcode($content).'
+				' . do_shortcode( $content ) . '
 				</div>
-			</div>
-			'.$nova_slider_images;
+			</div>';
 
-    if ($slide_numbers):
+			if ( $slide_style == 'horizontal' ) {
+
+				$nova_slider .= '
+				<div class="slider__image swiper-container">
+					<div class="swiper-wrapper">';
+
+					foreach( $slide_image_data as $image_datas => $image_data ) {
+
+						if ( ! empty( $image_data['button_text'] ) ) {
+							$button = '<a class="slide-button" style="background-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . '); border-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . ');" href="' . $image_data['button_url'] . '"><span class="down-up"><span>' . $image_data['button_text'] . '<i class="circle circle--right icon-right-open"></i></span></span></a>';
+						} else {
+							$button = "";
+						}
+
+						$nova_slider .= '
+						<div class="swiper-slide">
+							<div class="cover-slider" data-bg="' . $image_data['slide_image'] . '">' . $button . '<a class="swiper-slide__link" href="' . $image_data['button_url'] . '"></a></div>
+						</div>
+						';
+					}
+
+				$nova_slider .= '
+					</div>
+				</div>
+				';
+			}
+
+    if ( $slide_numbers ):
     	$nova_slider .= '<div class="quickview-pagination shortcode-slider-pagination" style="color: ' . $slide_numbers_color . '"></div>';
     endif;
 
 	$nova_slider .=	'</div>';
 
-	$nova_slider .= '<style>'.$mobile_height.' .swiper-pagination-bullet-active:after{ background-color: '.$slide_numbers_color.' } </style>';
+	$nova_slider .= '<style>' . $mobile_height . ' .swiper-pagination-bullet-active:after{ background-color: ' . $slide_numbers_color . ' } </style>';
 
 	return $nova_slider;
 }
 
-add_shortcode('slider', 'nova_slider');
+add_shortcode( 'slider', 'nova_slider' );
 
-function nova_image_slide($params = array(), $content = null) {
-	extract(shortcode_atts(array(
-		'title' 					=> '',
-		'subtitle'				=> '',
-		'description' 				=> '',
-		'text_color'				=> '#000000',
-		'button_text' 				=> '',
-		'button_url'				=> '',
-		'bg_color'					=> '#CCCCCC',
-		'bg_image'					=> ''
+function nova_image_slide( $params = array(), $content = null ) {
+	extract( shortcode_atts( array(
+		'title'        => '',
+		'subtitle'     => '',
+		'description'  => '',
+		'text_color'   => '#000000',
+		'button_text'  => '',
+		'button_color' => '#232323',
+		'button_url'   => '',
+		'bg_color'     => '#CCCCCC',
+		'bg_image'     => ''
 
-	), $params));
+	), $params) );
 
-	if (!empty($title))
-	{
-		$title = '<h1 class="slide-title title title--display-1 js-text-wave" style="color:'.$text_color.';">'.$title.'</h1>';
+	if ( !empty( $title ) )	{
+		$title = '<h1 class="slide-title" style="color:rgb(' . nova_hex2rgb( $text_color ) . ');"><span class="down-up"><span>' . $title . '</span></span></h1>';
 	} else {
 		$title = "";
 	}
 
-	if (!empty($subtitle))
-		{
-			$subtitle = '<h6 class="slide-title title title--overhead"><span class="down-up"><span>'.$subtitle.'</span></span></h6>';
-		} else {
-			$subtitle = "";
+	if ( ! empty( $subtitle ) )	{
+		$subtitle = '<h6 class="slide-subtitle" style="color:rgb(' . nova_hex2rgb( $text_color ) . ');"><span class="down-up"><span>' . $subtitle . '</span></span></h6>';
+	} else {
+		$subtitle = "";
 	}
 
-	if (is_numeric($bg_image))
-	{
-		$bg_image = wp_get_attachment_url($bg_image);
+	if ( is_numeric( $bg_image ) ) {
+		$bg_image = wp_get_attachment_url( $bg_image );
 	} else {
 		$bg_image = "";
 	}
-	$GLOBALS['slide_image'][] = $bg_image;
 
-	if (!empty($description))
-	{
-		$description = '<p class="slide-description description" style="color:rgb('.nova_hex2rgb($text_color).');"><span class="down-up"><span>'.$description.'</span></span></p>';
+	//Add data to array
+	global $slide_image_data;
+	array_push( $slide_image_data, array( 'slide_image' => $bg_image, 'button_text' => $button_text, 'button_color' => $button_color, 'button_url' => $button_url ) );
+
+	if ( !empty( $description ) ) {
+		$description = '<p class="slide-description" style="color:rgb(' . nova_hex2rgb( $text_color ) . ');"><span class="down-up"><span>' . $description . '</span></span></p>';
 	} else {
 		$description = "";
 	}
 
-	if (!empty($button_text))
-	{
-		$button = '<a class="slide-button btn-link btn-link--circle-right" style="background-color:rgb('.nova_hex2rgb($text_color).'); border-color:rgb('.nova_hex2rgb($text_color).'); color:rgb('.nova_hex2rgb($text_color).');" href="'.$button_url.'"><span class="down-up"><span>'.$button_text.'<i class="circle circle--right icon-right-open"></i></span></span></a>';
+	if ( ! empty( $button_text ) ) {
+		$button = '';
 	} else {
 		$button = "";
 	}
 
 	$nova_image_slide = '
-
 		<div class="swiper-slide"	style="background: '.$bg_color.';
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
@@ -144,7 +145,8 @@ function nova_image_slide($params = array(), $content = null) {
 				'.$description.'
 				'.$button.'
 			</div>
-		</div>';
+		</div>
+		';
 
 	return $nova_image_slide;
 }
