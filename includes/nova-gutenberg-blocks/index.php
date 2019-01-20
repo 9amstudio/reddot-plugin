@@ -26,6 +26,5 @@ if ( ! function_exists( 'nova_reddot_blocks_scripts' ) ) {
 }
 
 include_once 'posts_grid/block.php';
-require_once 'cf-7-gutenberg/class-cf7-gutenberg-block-plugin.php';
-//include_once 'social_media_profiles/block.php';
+include_once 'contact-stores/block.php';
 //include_once 'slider/block.php';

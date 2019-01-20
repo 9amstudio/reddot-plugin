@@ -36,7 +36,7 @@
 		category: 'reddot',
 		parent: [ 'getbowtied/th-slider' ],
 		attributes: {
-		    imgURL: {
+		    	imgURL: {
 	            type: 'string',
 	            attribute: 'src',
 	            selector: 'img',

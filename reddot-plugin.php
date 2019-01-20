@@ -25,9 +25,12 @@ $theme = wp_get_theme();
 if ( $theme->template != 'reddot') {
 	return;
 }
+include_once( 'includes/helpers.php' );
+
 
 include_once( 'includes/shortcodes/wp/socials.php' );
 include_once( 'includes/shortcodes/wp/slider.php' );
+include_once( 'includes/shortcodes/wp/nova-banner.php' );
 include_once( 'includes/shortcodes/wp/blog-posts.php' );
 include_once( 'includes/shortcodes/wp/custom-button.php' );
 include_once( 'includes/shortcodes/wc/woocommerce_products_user_bought.php' );
@@ -77,6 +80,7 @@ if ( defined(  'WPB_VC_VERSION' ) ) {
 		// Add new WP shortcodes to VC
 
 		include_once( 'includes/shortcodes/vc/wp/slider.php' );
+		include_once( 'includes/shortcodes/vc/wp/nova-banner.php' );
 		include_once( 'includes/shortcodes/vc/wp/blog-posts.php' );
 		include_once( 'includes/shortcodes/vc/wp/custom-button.php' );
 
