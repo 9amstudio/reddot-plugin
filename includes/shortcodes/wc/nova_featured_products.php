@@ -1,39 +1,16 @@
 <?php
-add_shortcode( 'nova_featured_products', 'wcpscwc_featured_products_slider' );
-function wcpscwc_featured_products_slider($atts){
+add_shortcode( 'nova_featured_products', 'nova_featured_products' );
+function nova_featured_products($atts){
 
 	global $woocommerce_loop;
 
 	extract(shortcode_atts(array(
-		'cats' 				=> '',
-		'design' 			=> '',
+		'category' 				=> '',
 		'tax' 				=> 'product_cat',
 		'limit' 			=> '-1',
-		'slide_to_show' 	=> '3',
-		'slide_to_scroll' 	=> '3',
-		'autoplay' 			=> 'true',
-		'autoplay_speed' 	=> '3000',
-		'speed' 			=> '300',
-		'arrows' 			=> 'true',
-		'dots' 				=> 'true',
-		'rtl'  				=> '',
-		'slider_cls'		=> 'products',
 	), $atts));
-
-	$unique = uniqid('nova_products_');
-
-	$cat = (!empty($cats)) ? explode(',',$cats) 	: '';
-	$slider_cls = !empty($slider_cls) ? $slider_cls : 'products';
-	$design = !empty($design) ? $design : '';
-
- 	// For RTL
-	if( empty($rtl) && is_rtl() ) {
-		$rtl = 'true';
-	} elseif ( $rtl == 'true' ) {
-		$rtl = 'true';
-	} else {
-		$rtl = 'false';
-	}
+	$cat = (!empty($category)) ? explode(',',$category) 	: '';
+	$carousel_configs = nova_get_param_slider_shortcode( $atts );
 
 	ob_start();
 
@@ -51,7 +28,7 @@ function wcpscwc_featured_products_slider($atts){
 
     $tax_query[] =array(
                     'taxonomy' 	=> $tax,
-                    'field' 	=> 'id',
+                    'field' 	=> 'slug',
                     'terms' 	=> $cat
               );
   }
@@ -66,17 +43,16 @@ function wcpscwc_featured_products_slider($atts){
 
 	// query database
 	$products = new WP_Query( $args );
-
 	if ( $products->have_posts() ) : ?>
-		<div class="wcpscwc-product-slider-wrap wcps-<?php echo $design; ?>">
-			<div class="woocommerce wcpscwc-product-slider" id="wcpscwc-product-slider-<?php echo $unique; ?>">
-			<?php
-			woocommerce_product_loop_start();
-			while ( $products->have_posts() ) : $products->the_post();
-				wc_get_template_part( 'content', 'product' );
-			endwhile; // end of the loop.
-			woocommerce_product_loop_end(); ?>
-			</div>
+		<div class="nova-product-shortcodes woocommerce">
+			<ul class="products slick-carousel" <?php echo $carousel_configs ?>>
+				<?php
+				//woocommerce_product_loop_start();
+				while ( $products->have_posts() ) : $products->the_post();
+					wc_get_template_part( 'content', 'product' );
+				endwhile; // end of the loop.
+				//woocommerce_product_loop_end(); ?>
+			</ul>
 		</div>
 	<?php endif;
 	wp_reset_postdata();
