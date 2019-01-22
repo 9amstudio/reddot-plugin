@@ -234,3 +234,13 @@ if( !function_exists('nova_field_column')) {
       ), $options);
   }
 }
+if( !function_exists('nova_get_param_index')) {
+  function nova_get_param_index($array, $attr){
+      foreach ($array as $index => $entry) {
+          if ($entry['param_name'] == $attr) {
+              return $index;
+          }
+      }
+      return -1;
+  }
+}

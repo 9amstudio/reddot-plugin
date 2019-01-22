@@ -3,8 +3,8 @@ if( !function_exists('nova_vc_slider_params')) {
   function nova_vc_slider_params(){
       $general_name = esc_html__('Slider Setting', 'reddot');
       $dependency =  array(
-          'element' => 'enable_carousel',
-          'value' => 'yes'
+          'element' => 'layout',
+          'value' => 'slider'
       );
       $params = array(
           array(
