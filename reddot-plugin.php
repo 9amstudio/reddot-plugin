@@ -27,13 +27,15 @@ if ( $theme->template != 'reddot') {
 }
 include_once( 'includes/helpers.php' );
 
-
 include_once( 'includes/shortcodes/wp/socials.php' );
 include_once( 'includes/shortcodes/wp/slider.php' );
 include_once( 'includes/shortcodes/wp/nova-banner.php' );
 include_once( 'includes/shortcodes/wp/blog-posts.php' );
 include_once( 'includes/shortcodes/wp/custom-button.php' );
+
 include_once( 'includes/shortcodes/wc/woocommerce_products_user_bought.php' );
+include_once( 'includes/shortcodes/wc/nova_featured_products.php' );
+
 
 /******************************************************************************/
 /* Plugin Updater *************************************************************/
