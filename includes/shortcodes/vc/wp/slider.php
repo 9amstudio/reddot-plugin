@@ -12,6 +12,7 @@ vc_map( array(
 	"class"			=> "",
 	"icon"			=> get_template_directory_uri() . "/images/vc/slider-main.png",
 	"as_parent" => array('only' => 'image_slide'),
+	"category"		=> "9AMstudio",
 	"content_element" => true,
 	"params" => array(
         // add params same as with any other content element
