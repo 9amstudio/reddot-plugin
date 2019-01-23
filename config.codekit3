@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "28905",
 "files": {
+	"/class/nova-wc-shortcodes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/class/nova-wc-shortcodes.php",
+		"oF": 0
+		},
 	"/includes/helpers.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -770,6 +777,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/vc/wp/slider.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/wc/nova_featured_products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wc/nova_featured_products.php",
 		"oF": 0
 		},
 	"/includes/shortcodes/wc/woocommerce_products_user_bought.php": {

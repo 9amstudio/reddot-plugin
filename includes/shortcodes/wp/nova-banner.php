@@ -37,10 +37,10 @@ function nova_shortcode_banner($atts, $content = null) {
 	</figure>
 	<?php if(!empty($bg_overlay) || !empty($bg_overlay_hover) || !empty($text_color)): ?>
 	<span class="custom-styles-css hide">
-	#<?php echo esc_attr($unique_id)?> .item--overlay{
+	#<?php echo esc_attr($unique_id)?> .nova-banner__overlay{
 	    background-color: <?php echo esc_attr($bg_overlay); ?>;
 	}
-	#<?php echo esc_attr($unique_id);?>:hover .item--overlay{
+	#<?php echo esc_attr($unique_id);?>:hover .nova-banner__overlay{
 	   background-color: <?php echo esc_attr($bg_overlay_hover); ?>;
 	}
 	#<?php echo esc_attr($unique_id)?> .nova-banner__content-wrap,
