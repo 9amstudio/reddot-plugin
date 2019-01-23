@@ -53,14 +53,14 @@ function nova_slider( $params = array(), $content = null ) {
 					foreach( $slide_image_data as $image_datas => $image_data ) {
 
 						if ( ! empty( $image_data['button_text'] ) ) {
-							$button = '<a class="slide-button" style="background-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . '); border-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . ');" href="' . $image_data['button_url'] . '"><span class="down-up"><span>' . $image_data['button_text'] . '<i class="circle circle--right icon-right-open"></i></span></span></a>';
+							$button = '<a class="slide-button" style="--slide-button-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . ');" href="' . $image_data['button_url'] . '"><span class="down-up"><span>' . $image_data['button_text'] . '<svg class="svg-icon"><use xlink:href="#reddot-arrow-right"></use></svg></span></span></a>';
 						} else {
 							$button = "";
 						}
 
 						$nova_slider .= '
 						<div class="swiper-slide">
-							<div class="cover-slider" data-bg="' . $image_data['slide_image'] . '">' . $button . '<a class="swiper-slide__link" href="' . $image_data['button_url'] . '"></a></div>
+							<div class="cover-slider" data-bg="' . $image_data['slide_image'] . '">' . $button . '</div>
 						</div>
 						';
 					}
@@ -93,19 +93,19 @@ function nova_image_slide( $params = array(), $content = null ) {
 		'button_text'  => '',
 		'button_color' => '#232323',
 		'button_url'   => '',
-		'bg_color'     => '#CCCCCC',
+		'bg_color'     => '#ffffff',
 		'bg_image'     => ''
 
 	), $params) );
 
 	if ( !empty( $title ) )	{
-		$title = '<h1 class="slide-title" style="color:rgb(' . nova_hex2rgb( $text_color ) . ');"><span class="down-up"><span>' . $title . '</span></span></h1>';
+		$title = '<h1 class="slide-title"><span class="down-up"><span>' . $title . '</span></span></h1>';
 	} else {
 		$title = "";
 	}
 
 	if ( ! empty( $subtitle ) )	{
-		$subtitle = '<h6 class="slide-subtitle" style="color:rgb(' . nova_hex2rgb( $text_color ) . ');"><span class="down-up"><span>' . $subtitle . '</span></span></h6>';
+		$subtitle = '<h6 class="slide-subtitle"><span class="down-up"><span>' . $subtitle . '</span></span></h6>';
 	} else {
 		$subtitle = "";
 	}
@@ -121,7 +121,7 @@ function nova_image_slide( $params = array(), $content = null ) {
 	array_push( $slide_image_data, array( 'slide_image' => $bg_image, 'button_text' => $button_text, 'button_color' => $button_color, 'button_url' => $button_url ) );
 
 	if ( !empty( $description ) ) {
-		$description = '<p class="slide-description" style="color:rgb(' . nova_hex2rgb( $text_color ) . ');"><span class="down-up"><span>' . $description . '</span></span></p>';
+		$description = '<p class="slide-description"><span class="down-up"><span>' . $description . '</span></span></p>';
 	} else {
 		$description = "";
 	}
@@ -133,12 +133,7 @@ function nova_image_slide( $params = array(), $content = null ) {
 	}
 
 	$nova_image_slide = '
-		<div class="swiper-slide"	style="background: '.$bg_color.';
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-				color: '.$text_color.'">
+		<div class="swiper-slide"	style="background: '.$bg_color.';">
 			<div class="slider__item" data-swiper-parallax="-1000">
 				'.$subtitle.'
 				'.$title.'
