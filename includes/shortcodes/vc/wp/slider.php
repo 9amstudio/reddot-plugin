@@ -10,7 +10,7 @@ vc_map( array(
 	"description"	=> "Slider",
 	"base"			=> "slider",
 	"class"			=> "",
-	"icon"			=> get_template_directory_uri() . "/images/vc/slider-main.png",
+	"icon"			=> get_template_directory_uri() . "/assets/images/vc/main_slider.png",
 	"as_parent" => array('only' => 'image_slide'),
 	"category"		=> "9AMstudio",
 	"content_element" => true,
@@ -85,7 +85,7 @@ vc_map( array(
     "name" => 'Image Slide',
     "base" => "image_slide",
     "as_child" => array('only' => 'slider'), // Use only|except attributes to limit parent (separate multiple values with comma)
-    "icon"	=> get_template_directory_uri() . "/images/vc/slider.png",
+    "icon"			=> get_template_directory_uri() . "/assets/images/vc/main_slide.png",
     "params" => array(
         // add params same as with any other content element
 
