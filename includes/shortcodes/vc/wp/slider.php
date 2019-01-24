@@ -57,7 +57,7 @@ vc_map( array(
  		),
 
  		array(
-			'type' => 'checkbox',
+			'type' => 'hidden',
 			'param_name' => 'slide_numbers',
 			'heading' => 'Slide Numbers',
 			'std' => false,
