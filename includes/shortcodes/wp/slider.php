@@ -74,6 +74,30 @@ function nova_slider( $params = array(), $content = null ) {
     if ( $slide_numbers ):
     	$nova_slider .= '<div class="quickview-pagination shortcode-slider-pagination" style="color: ' . $slide_numbers_color . '"></div>';
     endif;
+	
+	$nova_slider .= '
+		    <!-- Control -->
+			<div class="control-slider control-slider--vertical swiper-control">
+				<div>
+				    <div class="swiper-button-next zoom-cursor">
+					    <svg class="slider-nav slider-nav--progress" viewBox="0 0 46 46">
+                            <circle class="slider-nav__path-progress slider-nav__path-progress--gray" cx="23" cy="23" r="22.5"/>
+                        </svg>
+                        <svg class="slider-nav slider-nav--gray" viewBox="0 0 46 46">
+                            <circle class="slider-nav__path--gray" cx="23" cy="23" r="22.5"/>
+                            <path class="slider-nav__arrow" d="M26.45 22.45l-4.91-4.91a.7707464.7707464 0 0 0-1.09 1.09L24.82 23l-4.36 4.36a.7707464.7707464 0 0 0 1.09 1.09l4.91-4.91a.77.77 0 0 0-.01-1.09z"/>
+                        </svg>
+					</div>
+				    <div class="swiper-button-prev zoom-cursor">
+                        <svg class="slider-nav slider-nav--gray" viewBox="0 0 46 46">
+                            <circle class="slider-nav__path--gray" cx="23" cy="23" r="22.5"/>
+                            <path class="slider-nav__arrow" d="M18.5 23.55l4.91 4.91a.7707464.7707464 0 1 0 1.09-1.09L20.14 23l4.36-4.36a.7707464.7707464 0 0 0-1.09-1.09l-4.91 4.9a.77.77 0 0 0 0 1.1z"/>
+                        </svg>
+					</div>
+				</div>
+			</div>
+			<!-- /Control -->
+	';
 
 	$nova_slider .=	'</div>';
 
@@ -133,7 +157,7 @@ function nova_image_slide( $params = array(), $content = null ) {
 	}
 
 	$nova_image_slide = '
-		<div class="swiper-slide"	style="background: '.$bg_color.';">
+		<div class="swiper-slide" style="background: '.$bg_color.';">
 			<div class="slider__item" data-swiper-parallax="-1000">
 				'.$subtitle.'
 				'.$title.'
