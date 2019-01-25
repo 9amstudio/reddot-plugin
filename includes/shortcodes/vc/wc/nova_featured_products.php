@@ -95,7 +95,7 @@ vc_map(array(
    "description"	=> __( 'Display featured products', 'reddot-plugin' ),
    "base"			=> "nova_featured_products",
    "class"			=> "",
-   "icon"			=> "icon-wpb-wp",
+   "icon"			=> get_template_directory_uri() . "/assets/images/vc/wc.png",
    "params" 		=> $shortcode_params
 
 ));

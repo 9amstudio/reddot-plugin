@@ -14,6 +14,7 @@ if( !function_exists('nova_build_link_from_atts')) {
         return $result;
     }
 }
+
 if( !function_exists('nova_get_param_slider_shortcode')) {
   function nova_get_param_slider_shortcode( $atts, $param_column = 'columns' ){
       $slider_type    = $slide_to_scroll = $speed = $infinite_loop = $autoplay = $autoplay_speed = '';
@@ -192,6 +193,7 @@ if( !function_exists('nova_get_param_slider_shortcode')) {
       return $wrap_data;
   }
 }
+
 if( !function_exists('nova_get_column_from_param_shortcode')) {
   function nova_get_column_from_param_shortcode( $atts ){
       $array = array(
@@ -216,6 +218,7 @@ if( !function_exists('nova_get_column_from_param_shortcode')) {
       return $array;
   }
 }
+
 if( !function_exists('nova_field_column')) {
   function nova_field_column($options = array()){
       return array_merge(array(
@@ -234,6 +237,7 @@ if( !function_exists('nova_field_column')) {
       ), $options);
   }
 }
+
 if( !function_exists('nova_get_param_index')) {
   function nova_get_param_index($array, $attr){
       foreach ($array as $index => $entry) {
@@ -243,4 +247,74 @@ if( !function_exists('nova_get_param_index')) {
       }
       return -1;
   }
+}
+
+if( !function_exists('nova_get_responsive_media_css')) {
+  function nova_get_responsive_media_css( $args = array() ){
+      $content = '';
+      if(!empty($args) && !empty($args['target']) && !empty($args['media_sizes'])){
+          $content .=  ' data-la_component="UnitResponsive" ';
+          $content .=  " data-el_target='".esc_attr($args['target'])."' ";
+          $content .=  " data-el_media_sizes='".esc_attr(wp_json_encode($args['media_sizes']))."' ";
+      }
+      return $content;
+  }
+}
+
+if( !function_exists('nova_render_ressponive_media_css')) {
+  function nova_render_ressponive_media_css(&$css = array(), $args = array()){
+
+      if(!empty($args) && !empty($args['target']) && !empty($args['media_sizes'])){
+          $target = $args['target'];
+          foreach( $args['media_sizes'] as $css_attribute => $items ){
+              $media_sizes =  explode(';', $items);
+              if(!empty($media_sizes)){
+                  foreach($media_sizes as $value ){
+                      $tmp = explode(':', $value);
+                      if(!empty($tmp[1])){
+                          if(!isset($css[$tmp[0]])){
+                              $css[$tmp[0]] = '';
+                          }
+                          $css[$tmp[0]] .= $target . '{' . $css_attribute . ':'. $tmp[1] .'}';
+                      }
+                  }
+              }
+          }
+      }
+      return $css;
+  }
+}
+
+if( !function_exists('nova_render_responsive_media_style_tags')) {
+  function nova_render_responsive_media_style_tags( $custom_css = array() ){
+      $output = '';
+      if(function_exists('vc_is_inline') && vc_is_inline() && !empty($custom_css)){
+          foreach($custom_css as $media => $value){
+              switch($media){
+                  case 'lg':
+                      $output .= $value;
+                      break;
+                  case 'xlg':
+                      $output .= '@media (min-width: 1824px){'.$value.'}';
+                      break;
+                  case 'md':
+                      $output .= '@media (max-width: 1199px){'.$value.'}';
+                      break;
+                  case 'sm':
+                      $output .= '@media (max-width: 991px){'.$value.'}';
+                      break;
+                  case 'xs':
+                      $output .= '@media (max-width: 767px){'.$value.'}';
+                      break;
+                  case 'mb':
+                      $output .= '@media (max-width: 479px){'.$value.'}';
+                      break;
+              }
+          }
+      }
+      if(!empty($output)){
+          echo '<style type="text/css">'.$output.'</style>';
+      }
+  }
+
 }

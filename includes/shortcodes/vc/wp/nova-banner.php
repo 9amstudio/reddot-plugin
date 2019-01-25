@@ -11,7 +11,7 @@ vc_map(array(
    "description"	=> "Display the banner image with descripion",
    "base"			=> "nova_banner",
    "class"			=> "",
-   "icon"			=> "icon-wpb-wp",
+   "icon"			=> get_template_directory_uri() . "/assets/images/vc/banner.png",
 
 
    "params" 	=> array(
