@@ -5,14 +5,14 @@ function nova_recent_products($atts){
 	global $woocommerce_loop;
 
 	extract(shortcode_atts(array(
-		'category' 				=> '',
-		'tax' 						=> 'product_cat',
-		'limit' 					=> '12',
-		'orderby'					=> 'title',
-		'order'						=> 'ASC',
-		'layout' 					=> 'grid',
-		'columns'					=> 4,
-		'enable_ajax_loader' => '',
+		'category' 						=> '',
+		'tax' 								=> 'product_cat',
+		'limit' 							=> '12',
+		'orderby'							=> 'title',
+		'order'								=> 'ASC',
+		'layout' 							=> 'grid',
+		'columns'							=> 4,
+		'enable_ajax_loader' 	=> '',
 	), $atts));
 	$cat = (!empty($category)) ? explode(',',$category) 	: '';
 	$carousel_configs = nova_get_param_slider_shortcode( $atts );

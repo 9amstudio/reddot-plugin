@@ -9,11 +9,25 @@
 	],
 "creatorBuild": "28905",
 "files": {
-	"/class/nova-wc-shortcodes.php": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/class/nova-wc-shortcodes.php",
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
+	"/class/nova-vc-autocomplete-filters.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/class/nova-vc-autocomplete-filters.php",
+		"oF": 0
+		},
+	"/class/nova-vc-shortcode-param.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/class/nova-vc-shortcode-param.php",
 		"oF": 0
 		},
 	"/includes/helpers.php": {
@@ -55,369 +69,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/block.build.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/block.build-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/block.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/block-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/components/Editor.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/components/Editor-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/index.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/package-lock.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/package-lock-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/store.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/store-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/webpack.config.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/block-esnext/webpack.config-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/CHANGELOG.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/CHANGELOG.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/class-cf7-gutenberg-block-plugin.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/class-cf7-gutenberg-block-plugin.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/languages/cf-7-gutenberg.pot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/languages/cf-7-gutenberg.pot",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/LICENSE": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/LICENSE",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/readme.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/readme.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/readme.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/readme.txt",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/screenshot-1.png": {
-		"ft": 32768,
-		"iS": 17242,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/screenshot-1.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/autoload.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/autoload.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-endpoints.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-endpoints.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-deactivate.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-deactivate.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-factory.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-factory.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-review.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-review.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-translate.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback-translate.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-feedback.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-licenser.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-licenser.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-loader.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-loader.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-logger.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-logger.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-notification-manager.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-notification-manager.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-product.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-product.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-rollback.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-rollback.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-widget-dashboard-blog.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-widget-dashboard-blog.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-widget.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-widget.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-widgets-factory.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/class-themeisle-sdk-widgets-factory.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/composer.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/composer-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/index.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/LICENSE": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/LICENSE",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/load.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/load.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/start.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/codeinwp/themeisle-sdk/start.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_classmap.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_classmap.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_files.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_files.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_namespaces.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_namespaces.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_psr4.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_psr4.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_real.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/autoload_real.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/ClassLoader.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/ClassLoader.php",
-		"oF": 0
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/installed.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/installed-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/LICENSE": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/includes/nova-gutenberg-blocks/cf-7-gutenberg/vendor/composer/LICENSE",
-		"oF": 0
 		},
 	"/includes/nova-gutenberg-blocks/contact-stores/assets/editor.css": {
 		"aP": 1,
@@ -751,6 +402,13 @@
 		"oAP": "/includes/nova-gutenberg-blocks/social_media_profiles/block.php",
 		"oF": 0
 		},
+	"/includes/shortcodes/vc/wc/nova_featured_products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wc/nova_featured_products.php",
+		"oF": 0
+		},
 	"/includes/shortcodes/vc/wp/blog-posts.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -770,6 +428,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/vc/wp/nova-banner.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/vc/wp/nova-heading.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wp/nova-heading.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/vc/wp/nova-spacer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wp/nova-spacer.php",
 		"oF": 0
 		},
 	"/includes/shortcodes/vc/wp/slider.php": {
@@ -814,6 +486,20 @@
 		"oAP": "/includes/shortcodes/wp/nova-banner.php",
 		"oF": 0
 		},
+	"/includes/shortcodes/wp/nova-heading.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wp/nova-heading.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/wp/nova-spacer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wp/nova-spacer.php",
+		"oF": 0
+		},
 	"/includes/shortcodes/wp/slider.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -826,6 +512,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/wp/socials.php",
+		"oF": 0
+		},
+	"/includes/vc-params.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/vc-params.php",
 		"oF": 0
 		},
 	"/LICENSE.txt": {
