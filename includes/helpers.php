@@ -253,7 +253,6 @@ if( !function_exists('nova_get_responsive_media_css')) {
   function nova_get_responsive_media_css( $args = array() ){
       $content = '';
       if(!empty($args) && !empty($args['target']) && !empty($args['media_sizes'])){
-          $content .=  ' data-la_component="UnitResponsive" ';
           $content .=  " data-el_target='".esc_attr($args['target'])."' ";
           $content .=  " data-el_media_sizes='".esc_attr(wp_json_encode($args['media_sizes']))."' ";
       }
