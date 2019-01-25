@@ -53,7 +53,7 @@ function nova_slider( $params = array(), $content = null ) {
 					foreach( $slide_image_data as $image_datas => $image_data ) {
 
 						if ( ! empty( $image_data['button_text'] ) ) {
-							$button = '<a class="slide-button" style="--slide-button-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . ');" href="' . $image_data['button_url'] . '"><span class="down-up"><span>' . $image_data['button_text'] . '<svg class="svg-icon"><use xlink:href="#reddot-arrow-right"></use></svg></span></span></a>';
+							$button = '<a class="slide-button" style="--slide-button-color:rgb(' . nova_hex2rgb( $image_data['button_color'] ) . ');" href="' . $image_data['button_url'] . '">' . $image_data['button_text'] . '<svg class="svg-icon"><use xlink:href="#reddot-arrow-right"></use></svg></a>';
 						} else {
 							$button = "";
 						}
@@ -158,7 +158,7 @@ function nova_image_slide( $params = array(), $content = null ) {
 
 	$nova_image_slide = '
 		<div class="swiper-slide" style="background: '.$bg_color.';">
-			<div class="slider__item" data-swiper-parallax="-1000">
+			<div class="slider__item">
 				'.$subtitle.'
 				'.$title.'
 				'.$description.'
