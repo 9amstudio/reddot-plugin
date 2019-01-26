@@ -317,3 +317,69 @@ if( !function_exists('nova_render_responsive_media_style_tags')) {
   }
 
 }
+if( !function_exists('nova_locate_shortcode_template')) {
+  function nova_locate_shortcode_template( $path, $var = null ) {
+
+      $vc_templates = 'vc_templates/';
+
+      $theme_template = $vc_templates . $path . '.php';
+      $plugin_template = plugin_dir_path(__FILE__). 'templates/' . $path . '.php';
+
+      $located = locate_template(array(
+          $theme_template
+      ));
+
+      if( ! $located && file_exists( $plugin_template ) ){
+          return apply_filters( 'Nova/shortcode/locate_template', $plugin_template, $path );
+      }
+
+      return apply_filters( 'Nova/shortcode/locate_template', $located, $path );
+
+  }
+}
+if( !function_exists('nova_get_shortcode_template')) {
+  function nova_get_shortcode_template( $path, $var = null, $return = false ) {
+
+      $located = self::locate_template( $path, $var );
+
+      if( $var && is_array( $var ) ) {
+          extract( $var, EXTR_SKIP );
+      }
+
+      if( $return ) {
+          ob_start();
+      }
+
+      include ( $located );
+
+      if( $return ) {
+          return ob_get_clean();
+      }
+  }
+}
+if( !function_exists('nova_auto_detect_shortcode_callback')) {
+  function nova_auto_detect_shortcode_callback( $atts, $content = null, $shortcode_tag ) {
+
+      if(!empty($atts['enable_ajax_loader'])){
+          unset($atts['enable_ajax_loader']);
+          return self::get_template(
+              'ajax_wrapper',
+              array(
+                  'shortcode_tag' => $shortcode_tag,
+                  'atts' => $atts,
+                  'content' => $content
+              ),
+              true
+          );
+      }
+
+      return self::get_template(
+          $shortcode_tag,
+          array(
+              'atts' => $atts,
+              'content' => $content
+          ),
+          true
+      );
+  }  
+}
