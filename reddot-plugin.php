@@ -38,6 +38,8 @@ include_once( 'includes/shortcodes/wp/nova-collection.php' );
 
 include_once( 'includes/shortcodes/wc/woocommerce_products_user_bought.php' );
 include_once( 'includes/shortcodes/wc/nova_featured_products.php' );
+include_once( 'includes/shortcodes/wc/nova_recent_products.php' );
+include_once( 'includes/shortcodes/wc/nova_best_selling_products.php' );
 
 
 /******************************************************************************/
@@ -94,6 +96,8 @@ if ( defined(  'WPB_VC_VERSION' ) ) {
 		include_once( 'includes/shortcodes/vc/wp/custom-button.php' );
 		include_once( 'includes/shortcodes/vc/wp/nova-collection.php' );
 		include_once( 'includes/shortcodes/vc/wc/nova_featured_products.php' );
+		include_once( 'includes/shortcodes/vc/wc/nova_recent_products.php' );
+		include_once( 'includes/shortcodes/vc/wc/nova_best_selling_products.php' );
 		Nova_Shortcodes_Param::get_instance();
 		Nova_Shortcodes_Autocomplete_Filters::get_instance();
 	}

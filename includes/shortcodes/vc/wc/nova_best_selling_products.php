@@ -90,10 +90,10 @@ if($slides_column_idx){
 $shortcode_params = array_merge( $shortcode_params, $carousel);
 vc_map(array(
 
-   "name"			=> "Nova Featured products",
+   "name"			=> "Nova Best Selling products",
    "category"		=> "9AMstudio",
    "description"	=> __( 'Display featured products', 'reddot-plugin' ),
-   "base"			=> "nova_featured_products",
+   "base"			=> "nova_best_selling_products",
    "class"			=> "",
    "icon"			=> get_template_directory_uri() . "/assets/images/vc/wc.png",
    "params" 		=> $shortcode_params

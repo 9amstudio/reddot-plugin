@@ -80,7 +80,14 @@ $shortcode_params = array(
       'min' => -1,
       'max' => 1000,
       'group' 		=> __('Layout Setting', 'reddot-plugin')
-  )
+  ),
+  array(
+    'type' => 'checkbox',
+    'heading' => __( 'Enable Ajax Loading', 'reddot-plugin' ),
+    'param_name' => 'enable_ajax_loader',
+    'value' => array( __( 'Yes', 'reddot-plugin' ) => 'yes' ),
+    'group' 		=> __('Layout Setting', 'reddot-plugin')
+)
 );
 $carousel = nova_vc_slider_params();
 $slides_column_idx = nova_get_param_index( $carousel, 'slides_column');
@@ -90,10 +97,10 @@ if($slides_column_idx){
 $shortcode_params = array_merge( $shortcode_params, $carousel);
 vc_map(array(
 
-   "name"			=> "Nova Featured products",
+   "name"			=> "Nova recent products",
    "category"		=> "9AMstudio",
    "description"	=> __( 'Display featured products', 'reddot-plugin' ),
-   "base"			=> "nova_featured_products",
+   "base"			=> "nova_recent_products",
    "class"			=> "",
    "icon"			=> get_template_directory_uri() . "/assets/images/vc/wc.png",
    "params" 		=> $shortcode_params
