@@ -1,8 +1,8 @@
-.gbt_18_th_posts_grid
+.nova_18_th_posts_grid
 {
 	margin-bottom: 2.5rem;
 
-	.gbt_shortcode_blog_posts
+	.nova_shortcode_blog_posts
 	{
 		&.full
 		{
@@ -25,7 +25,7 @@
 			}
 		}
 
-		.gbt_18_th_posts_grid_img {
+		.nova_18_th_posts_grid_img {
 			background-size: cover;
 		    display: block;
 		    overflow: hidden;
@@ -41,13 +41,13 @@
 	        }
 		}
 
-		.gbt_shortcode_blog_post {
+		.nova_shortcode_blog_post {
 			@media all and (max-width: 639px) {
 				display: block;
 			}
 
-			.gbt_shortcode_blog_posts_content {
-				.gbt_shortcode_blog_posts_title {
+			.nova_shortcode_blog_posts_content {
+				.nova_shortcode_blog_posts_title {
 					@media print, screen and (max-width: 40em) {
 						font-size: 18px;
 						line-height: 1.475rem;
@@ -60,7 +60,7 @@
 				}
 			}
 
-			.gbt_shortcode_blog_posts_image {
+			.nova_shortcode_blog_posts_image {
 				transition: transform .3s ease-in-out;
 			}
 		}

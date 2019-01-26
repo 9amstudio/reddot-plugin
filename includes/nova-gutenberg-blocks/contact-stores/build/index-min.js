@@ -56,7 +56,7 @@
       return [
         el(
           InspectorControls, {
-            key: 'gbt_18_th_socials_settings'
+            key: 'nova_18_th_socials_settings'
           },
           el(
             'div', {
@@ -64,7 +64,7 @@
             },
             el(
               RangeControl, {
-                key: "gbt_18_th_socials_font_size",
+                key: "nova_18_th_socials_font_size",
                 value: attributes.fontSize,
                 allowReset: false,
                 initialPosition: 16,
@@ -80,7 +80,7 @@
             ),
             el(
               ColorSettings, {
-                key: 'gbt_18_th_socials_icons_color',
+                key: 'nova_18_th_socials_icons_color',
                 title: i18n.__('Icons Color'),
                 colorSettings: [{
                   label: i18n.__('Icons Color'),
@@ -97,11 +97,11 @@
         ),
         el(
           BlockControls, {
-            key: 'gbt_18_th_socials_alignment_controls'
+            key: 'nova_18_th_socials_alignment_controls'
           },
           el(
             AlignmentToolbar, {
-              key: 'gbt_18_th_socials_alignment',
+              key: 'nova_18_th_socials_alignment',
               value: attributes.align,
               onChange: function(newAlignment) {
                 props.setAttributes({

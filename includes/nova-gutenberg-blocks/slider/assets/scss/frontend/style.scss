@@ -1,4 +1,4 @@
-.gbt_18_th_slider_wrapper {
+.nova_18_th_slider_wrapper {
 	margin-bottom: 2.5rem;
 
 	.swiper-container.full_height {
@@ -25,12 +25,12 @@
 }
 
 @media print, screen and (min-width: 40em) {
-	.wp-block-getbowtied-th-slider .swiper-slide.center-align .slider-content-wrapper {
+	.wp-block-nova-th-slider .swiper-slide.center-align .slider-content-wrapper {
 	    text-align: center;
     	margin: auto;
 	}
 
-	.wp-block-getbowtied-th-slider .swiper-slide.right-align .slider-content-wrapper {
+	.wp-block-nova-th-slider .swiper-slide.right-align .slider-content-wrapper {
 	    width: 100%;
 	    text-align: right;
     	margin-left: auto;

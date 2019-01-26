@@ -2,7 +2,7 @@
 
 // [nova_heading]
 function nova_shortcode_heading($atts) {
-	$sliderrandomid = rand();
+
 	extract(shortcode_atts(array(
 		"title" 		=>  '',
 		"sub_title" 		=>  '',

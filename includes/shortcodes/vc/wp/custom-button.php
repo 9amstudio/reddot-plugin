@@ -7,7 +7,7 @@
 vc_map( array(
 	"name"			=> "Simple Link",
 	"description"	=> "Simple Link",
-	"base"			=> "gbt_custom_link",
+	"base"			=> "nova_custom_link",
 	"class"			=> "",
 	"icon"			=> "icon-wpb-ui-button",
 

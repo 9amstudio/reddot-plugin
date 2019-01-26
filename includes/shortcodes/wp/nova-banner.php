@@ -2,7 +2,7 @@
 
 // [nova_banner]
 function nova_shortcode_banner($atts, $content = null) {
-	$sliderrandomid = rand();
+
 	extract(shortcode_atts(array(
 		"banner_id" 		=>  '',
 		"text_color" 		=>  '',
