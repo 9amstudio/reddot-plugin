@@ -26,6 +26,7 @@ if ( $theme->template != 'reddot') {
 	return;
 }
 include_once( 'includes/helpers.php' );
+include_once( 'includes/actions.php' );
 
 include_once( 'includes/shortcodes/wp/socials.php' );
 include_once( 'includes/shortcodes/wp/slider.php' );

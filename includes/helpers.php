@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 if( !function_exists('nova_build_link_from_atts')) {
     function nova_build_link_from_atts($value){
         $result = array( 'url' => '', 'title' => '', 'target' => '', 'rel' => '' );
@@ -317,69 +321,76 @@ if( !function_exists('nova_render_responsive_media_style_tags')) {
   }
 
 }
-if( !function_exists('nova_locate_shortcode_template')) {
-  function nova_locate_shortcode_template( $path, $var = null ) {
+if( !function_exists('nova_shortcode_products_list')) {
+  function nova_shortcode_products_list($atts){
+    global $woocommerce_loop;
 
-      $vc_templates = 'vc_templates/';
+    extract(shortcode_atts(array(
+      'category' 						=> '',
+      'tax' 								=> 'product_cat',
+      'limit' 							=> '12',
+      'orderby'							=> 'title',
+      'order'								=> 'ASC',
+      'layout' 							=> 'grid',
+      'columns'							=> 4,
+      'enable_ajax_loader' 	=> '',
+    ), $atts));
+    $cat = (!empty($category)) ? explode(',',$category) 	: '';
+    $carousel_configs = nova_get_param_slider_shortcode( $atts );
+    // setup query
+    if($cat != "") {
 
-      $theme_template = $vc_templates . $path . '.php';
-      $plugin_template = plugin_dir_path(__FILE__). 'templates/' . $path . '.php';
+      $tax_query[] =array(
+                      'taxonomy' 	=> $tax,
+                      'field' 	=> 'slug',
+                      'terms' 	=> $cat
+                );
+    }
 
-      $located = locate_template(array(
-          $theme_template
-      ));
+    $args = array(
+      'post_type'				=> 'product',
+      'post_status' 			=> 'publish',
+      'ignore_sticky_posts'	=> 1,
+      'posts_per_page' 		=> $limit,
+      'tax_query' 			=> $tax_query,
+      'orderby' => $orderby,
+      'order'   => $order,
+    );
 
-      if( ! $located && file_exists( $plugin_template ) ){
-          return apply_filters( 'Nova/shortcode/locate_template', $plugin_template, $path );
-      }
-
-      return apply_filters( 'Nova/shortcode/locate_template', $located, $path );
+    // query database
+    $products = new WP_Query( $args );
+    $content = '';
+    if ( $products->have_posts() ) :
+      $content .='<div class="nova-product-shortcodes woocommerce">';
+        if ($layout == 'slider'):
+        $content .='<ul class="products slick-carousel" '.$carousel_configs.'>';
+        else:
+          $content .='<ul class="products columns-'.$columns.'">';
+        endif;
+          //woocommerce_product_loop_start();
+          while ( $products->have_posts() ) : $products->the_post();
+            ob_start();
+            wc_get_template_part( 'content', 'product' );
+            $content .= ob_get_clean();
+          endwhile; // end of the loop.
+          //woocommerce_product_loop_end();
+        $content .='</ul>';
+        $content .='</div>';
+    endif;
+    wp_reset_postdata();
+  return $content;
 
   }
 }
-if( !function_exists('nova_get_shortcode_template')) {
-  function nova_get_shortcode_template( $path, $var = null, $return = false ) {
-
-      $located = self::locate_template( $path, $var );
-
-      if( $var && is_array( $var ) ) {
-          extract( $var, EXTR_SKIP );
-      }
-
-      if( $return ) {
-          ob_start();
-      }
-
-      include ( $located );
-
-      if( $return ) {
-          return ob_get_clean();
-      }
+if( !function_exists('nova_shortcode_products_list_ajax')) {
+  function nova_shortcode_products_list_ajax($atts){
+    $atts = wp_json_encode($atts);
+    $content = '';
+    $content .= '<div class="elm-ajax-container-wrapper clearfix">';
+    	$content .= '<div class="elm-ajax-loader" data-query-settings="'.esc_attr( $atts ).'">';
+      $content .= '<div class="nova-shortcode-loading"><span></span></div>';
+    	$content .= '</div>';
+    $content .= '</div>';
+    return $content;
   }
-}
-if( !function_exists('nova_auto_detect_shortcode_callback')) {
-  function nova_auto_detect_shortcode_callback( $atts, $content = null, $shortcode_tag ) {
-
-      if(!empty($atts['enable_ajax_loader'])){
-          unset($atts['enable_ajax_loader']);
-          return self::get_template(
-              'ajax_wrapper',
-              array(
-                  'shortcode_tag' => $shortcode_tag,
-                  'atts' => $atts,
-                  'content' => $content
-              ),
-              true
-          );
-      }
-
-      return self::get_template(
-          $shortcode_tag,
-          array(
-              'atts' => $atts,
-              'content' => $content
-          ),
-          true
-      );
-  }  
 }
