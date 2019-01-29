@@ -26,7 +26,7 @@
 	const Polygon 				= wp.components.Polygon;
 
 	/* Register Block */
-	registerBlockType( 'getbowtied/th-slide', {
+	registerBlockType( 'nova/th-slide', {
 		title: i18n.__( 'Slide' ),
 		icon:
 			el( SVG, { xmlns:'http://www.w3.org/2000/svg', viewBox:'0 0 100 100' },
@@ -34,7 +34,7 @@
 				el( Path, { d:'M65,40c4.1,0,7.5-3.4,7.5-7.5S69.1,25,65,25s-7.5,3.4-7.5,7.5S60.9,40,65,40z M65,30c1.4,0,2.5,1.1,2.5,2.5 S66.4,35,65,35s-2.5-1.1-2.5-2.5S63.6,30,65,30z' } )
 			),
 		category: 'reddot',
-		parent: [ 'getbowtied/th-slider' ],
+		parent: [ 'nova/th-slider' ],
 		attributes: {
 		    	imgURL: {
 	            type: 'string',
@@ -95,7 +95,7 @@
 				el(
 					InspectorControls,
 					{
-						key: 'gbt_18_th_slide_inspector'
+						key: 'nova_18_th_slide_inspector'
 					},
 					el(
 						'div',
@@ -105,7 +105,7 @@
 						el(
 							TextControl,
 							{
-								key: "gbt_18_th_editor_slide_link",
+								key: "nova_18_th_editor_slide_link",
 	              				label: i18n.__( 'Slide Link' ),
 	              				type: 'text',
 	              				value: attributes.slideURL,
@@ -118,7 +118,7 @@
 						el(
 							ToggleControl,
 							{
-								key: "gbt_18_th_editor_slide_button",
+								key: "nova_18_th_editor_slide_button",
 	              				label: i18n.__( 'Slide Button' ),
 	              				checked: attributes.slideButton,
 	              				onChange: function() {
@@ -129,7 +129,7 @@
 						el(
 							ColorSettings,
 							{
-								key: 'gbt_18_th_editor_slide_colors',
+								key: 'nova_18_th_editor_slide_colors',
 								initialOpen: false,
 								title: i18n.__( 'Colors' ),
 								colorSettings: [
@@ -154,13 +154,13 @@
 				),
 				el( 'div',
 					{
-						key: 		'gbt_18_th_editor_slide_wrapper',
-						className : 'gbt_18_th_editor_slide_wrapper'
+						key: 		'nova_18_th_editor_slide_wrapper',
+						className : 'nova_18_th_editor_slide_wrapper'
 					},
 					el(
 						MediaUpload,
 						{
-							key: 'gbt_18_th_editor_slide_image',
+							key: 'nova_18_th_editor_slide_image',
 							allowedTypes: [ 'image' ],
 							buttonProps: { className: 'components-button button button-large' },
 	              			value: attributes.imgID,
@@ -176,8 +176,8 @@
 		              				! attributes.imgID && el(
 		              					Button,
 		              					{
-		              						key: 'gbt_18_th_slide_add_image_button',
-		              						className: 'gbt_18_th_slide_add_image_button button add_image',
+		              						key: 'nova_18_th_slide_add_image_button',
+		              						className: 'nova_18_th_slide_add_image_button button add_image',
 		              						onClick: img.open
 		              					},
 		              					i18n.__( 'Add Image' )
@@ -185,8 +185,8 @@
 	              					!! attributes.imgID && el(
 	              						Button,
 										{
-											key: 'gbt_18_th_slide_remove_image_button',
-											className: 'gbt_18_th_slide_remove_image_button button remove_image',
+											key: 'nova_18_th_slide_remove_image_button',
+											className: 'nova_18_th_slide_remove_image_button button remove_image',
 											onClick: function() {
 												img.close;
 												props.setAttributes({
@@ -205,12 +205,12 @@
 					el(
 						BlockControls,
 						{
-							key: 'gbt_18_th_editor_slide_alignment'
+							key: 'nova_18_th_editor_slide_alignment'
 						},
 						el(
 							AlignmentToolbar,
 							{
-								key: 'gbt_18_th_editor_slide_alignment_control',
+								key: 'nova_18_th_editor_slide_alignment_control',
 								value: attributes.alignment,
 								onChange: function( newAlignment ) {
 									props.setAttributes( { alignment: newAlignment } );
@@ -221,8 +221,8 @@
 					el(
 						'div',
 						{
-							key: 		'gbt_18_th_editor_slide_wrapper',
-							className: 	'gbt_18_th_editor_slide_wrapper',
+							key: 		'nova_18_th_editor_slide_wrapper',
+							className: 	'nova_18_th_editor_slide_wrapper',
 							style:
 							{
 								backgroundColor: attributes.backgroundColor,
@@ -232,14 +232,14 @@
 						el(
 							'div',
 							{
-								key: 		'gbt_18_th_editor_slide_content',
-								className: 	'gbt_18_th_editor_slide_content',
+								key: 		'nova_18_th_editor_slide_content',
+								className: 	'nova_18_th_editor_slide_content',
 							},
 							el(
 								'div',
 								{
-									key: 		'gbt_18_th_editor_slide_container',
-									className: 	'gbt_18_th_editor_slide_container align-' + attributes.alignment,
+									key: 		'nova_18_th_editor_slide_container',
+									className: 	'nova_18_th_editor_slide_container align-' + attributes.alignment,
 									style:
 									{
 										textAlign: attributes.alignment
@@ -248,19 +248,19 @@
 								el(
 									'div',
 									{
-										key: 		'gbt_18_th_editor_slide_title',
-										className: 	'gbt_18_th_editor_slide_title',
+										key: 		'nova_18_th_editor_slide_title',
+										className: 	'nova_18_th_editor_slide_title',
 									},
 									el(
 										RichText,
 										{
-											key: 'gbt_18_th_editor_slide_title_input',
+											key: 'nova_18_th_editor_slide_title_input',
 											style:
 											{
 												color: attributes.textColor,
 											},
 											format: 'string',
-											className: 'gbt_18_th_editor_slide_title_input',
+											className: 'nova_18_th_editor_slide_title_input',
 											formattingControls: [],
 											tagName: 'h2',
 											value: attributes.title,
@@ -274,18 +274,18 @@
 								el(
 									'div',
 									{
-										key: 		'gbt_18_th_editor_slide_description',
-										className: 	'gbt_18_th_editor_slide_description',
+										key: 		'nova_18_th_editor_slide_description',
+										className: 	'nova_18_th_editor_slide_description',
 									},
 									el(
 										RichText,
 										{
-											key: 'gbt_18_th_editor_slide_description_input',
+											key: 'nova_18_th_editor_slide_description_input',
 											style:
 											{
 												color: attributes.textColor,
 											},
-											className: 'gbt_18_th_editor_slide_description_input',
+											className: 'nova_18_th_editor_slide_description_input',
 											format: 'string',
 											tagName: 'p',
 											value: attributes.description,
@@ -300,14 +300,14 @@
 								!! attributes.slideButton && el(
 									'div',
 									{
-										key: 		'gbt_18_th_editor_slide_button',
-										className: 	'gbt_18_th_editor_slide_button',
+										key: 		'nova_18_th_editor_slide_button',
+										className: 	'nova_18_th_editor_slide_button',
 									},
 									el(
 										RichText,
 										{
-											key: 'gbt_18_th_editor_slide_button_input',
-											className: 'gbt_18_th_editor_slide_button_input',
+											key: 'nova_18_th_editor_slide_button_input',
+											className: 'nova_18_th_editor_slide_button_input',
 											format: 'string',
 											tagName: 'h5',
 											style:
@@ -341,8 +341,8 @@
 
 			return el( 'div',
 				{
-					key: 		'gbt_18_th_swiper_slide',
-					className: 	'gbt_18_th_swiper_slide swiper-slide ' + attributes.alignment + '-align',
+					key: 		'nova_18_th_swiper_slide',
+					className: 	'nova_18_th_swiper_slide swiper-slide ' + attributes.alignment + '-align',
 					style:
 					{
 						backgroundColor: attributes.backgroundColor,
@@ -352,7 +352,7 @@
 				},
 				! attributes.slideButton && attributes.slideURL != '' && el( 'a',
 					{
-						key: 		'gbt_18_th_slide_fullslidelink',
+						key: 		'nova_18_th_slide_fullslidelink',
 						className: 	'fullslidelink',
 						href: 		attributes.slideURL,
 						'target': 	'_blank'
@@ -360,19 +360,19 @@
 				),
 				el( 'div',
 					{
-						key: 					'gbt_18_th_slide_content',
-						className: 				'gbt_18_th_slide_content slider-content',
+						key: 					'nova_18_th_slide_content',
+						className: 				'nova_18_th_slide_content slider-content',
 						'data-swiper-parallax': '-1000'
 					},
 					el( 'div',
 						{
-							key: 		'gbt_18_th_slide_content_wrapper',
-							className: 	'gbt_18_th_slide_content_wrapper slider-content-wrapper'
+							key: 		'nova_18_th_slide_content_wrapper',
+							className: 	'nova_18_th_slide_content_wrapper slider-content-wrapper'
 						},
 						attributes.title != '' && el( 'h2',
 							{
-								key: 		'gbt_18_th_slide_title',
-								className: 	'gbt_18_th_slide_title slide-title',
+								key: 		'nova_18_th_slide_title',
+								className: 	'nova_18_th_slide_title slide-title',
 								style:
 								{
 									color: attributes.textColor
@@ -382,8 +382,8 @@
 						),
 						attributes.description != '' && el( 'p',
 							{
-								key: 		'gbt_18_th_slide_description',
-								className: 	'gbt_18_th_slide_description slide-description',
+								key: 		'nova_18_th_slide_description',
+								className: 	'nova_18_th_slide_description slide-description',
 								style:
 								{
 									color: attributes.textColor
@@ -393,8 +393,8 @@
 						),
 						!! attributes.slideButton && attributes.buttonText != '' && el( 'a',
 							{
-								key: 		'gbt_18_th_slide_button',
-								className: 	'gbt_18_th_slide_button slide-button',
+								key: 		'nova_18_th_slide_button',
+								className: 	'nova_18_th_slide_button slide-button',
 								href: attributes.slideURL,
 								style:
 								{

@@ -1,8 +1,8 @@
 <?php
 
 // [blog_posts]
-function getbowtied_shortcode_blog_posts($atts, $content = null) {
-	$sliderrandomid = rand();
+function nova_shortcode_blog_posts($atts, $content = null) {
+
 	extract(shortcode_atts(array(
 		"posts" 		=>  '9',
 		"category" 		=>  '',
@@ -10,7 +10,7 @@ function getbowtied_shortcode_blog_posts($atts, $content = null) {
 	ob_start();
 	?>
 
-	<div class="gbt_shortcode_blog_posts">
+	<div class="nova_shortcode_blog_posts">
 		<div class="row">
 
 	        <?php 
@@ -30,10 +30,10 @@ function getbowtied_shortcode_blog_posts($atts, $content = null) {
 	                
 					<div class="small-12 medium-4 large-3 columns">
 
-						<div class="gbt_shortcode_blog_post">
+						<div class="nova_shortcode_blog_post">
 
 							<?php if ( has_post_thumbnail() ) : ?>
-								<div class="gbt_shortcode_blog_posts_image">
+								<div class="nova_shortcode_blog_posts_image">
 									<a href="<?php the_permalink(); ?>">
 										<?php echo the_post_thumbnail('medium'); ?>
 										<?php echo the_post_thumbnail('thumbnail'); ?>
@@ -41,11 +41,11 @@ function getbowtied_shortcode_blog_posts($atts, $content = null) {
 								</div>
 							<?php endif; ?>
 
-							<div class="gbt_shortcode_blog_posts_content">
-								<div class="gbt_shortcode_blog_posts_meta">
+							<div class="nova_shortcode_blog_posts_content">
+								<div class="nova_shortcode_blog_posts_meta">
 									<?php echo nova_posted_on(); ?>
 								</div>
-								<h4 class="gbt_shortcode_blog_posts_title site-secondary-font">
+								<h4 class="nova_shortcode_blog_posts_title site-secondary-font">
 									<a href="<?php the_permalink(); ?>">
 										<?php echo get_the_title(); ?>
 									</a>
@@ -70,4 +70,4 @@ function getbowtied_shortcode_blog_posts($atts, $content = null) {
 	return $content;
 }
 
-add_shortcode("blog_posts", "getbowtied_shortcode_blog_posts");
+add_shortcode("blog_posts", "nova_shortcode_blog_posts");

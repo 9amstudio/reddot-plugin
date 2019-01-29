@@ -14,16 +14,16 @@ vc_map(array(
 
 
    "params" 	=> array(
-		 array(
-					'type' => 'textfield',
-					'heading' => esc_html__('Title', 'reddot-plugin'),
-					'param_name' => 'title'
-			),
-      array(
-           'type' => 'textfield',
-           'heading' => esc_html__('Sub Title', 'reddot-plugin'),
-           'param_name' => 'sub_title'
-       ),
+		array(
+			'type' => 'textfield',
+			'heading' => esc_html__('Title', 'reddot-plugin'),
+			'param_name' => 'title'
+		),
+		array(
+			'type' => 'textfield',
+			'heading' => esc_html__('Sub Title', 'reddot-plugin'),
+			'param_name' => 'sub_title'
+		),
    )
 
 ));

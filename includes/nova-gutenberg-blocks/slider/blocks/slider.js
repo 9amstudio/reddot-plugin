@@ -22,7 +22,7 @@
 	const Polygon 				= wp.components.Polygon;
 
 	/* Register Block */
-	registerBlockType( 'getbowtied/th-slider', {
+	registerBlockType( 'nova/th-slider', {
 		title: i18n.__( 'Slider' ),
 		icon:
 			el( SVG, { xmlns:'http://www.w3.org/2000/svg', viewBox:'0 0 100 100' },
@@ -117,7 +117,7 @@
 				let n = [];
 
                 for ( let i = 1; i <= attributes.slides; i++ ) {
-                	n.push(["getbowtied/th-slide", {
+                	n.push(["nova/th-slide", {
                         tabNumber: i
                     }]);
                 }
@@ -148,7 +148,7 @@
 				el(
 					InspectorControls,
 					{
-						key: 'gbt_18_th_slider_inspector'
+						key: 'nova_18_th_slider_inspector'
 					},
 					el(
 						'div',
@@ -158,7 +158,7 @@
 						el(
 							ToggleControl,
 							{
-								key: "gbt_18_th_slider_full_height",
+								key: "nova_18_th_slider_full_height",
 								label: i18n.__( 'Full Height' ),
 								checked: attributes.fullHeight,
 								onChange: function() {
@@ -170,7 +170,7 @@
 						el(
 							RangeControl,
 							{
-								key: "gbt_18_th_slider_custom_height",
+								key: "nova_18_th_slider_custom_height",
 								value: attributes.customHeight,
 								allowReset: false,
 								initialPosition: 800,
@@ -185,7 +185,7 @@
 						el(
 							RangeControl,
 							{
-								key: "gbt_18_th_slider_slides",
+								key: "nova_18_th_slider_slides",
 								value: attributes.slides,
 								allowReset: false,
 								initialPosition: 3,
@@ -201,7 +201,7 @@
 						el(
 							ToggleControl,
 							{
-								key: "gbt_18_th_slider_pagination",
+								key: "nova_18_th_slider_pagination",
 	              				label: i18n.__( 'Pagination Bullets' ),
 	              				checked: attributes.pagination,
 	              				onChange: function() {
@@ -212,7 +212,7 @@
 						el(
 							ColorSettings,
 							{
-								key: 'gbt_18_th_slider_arrows_color',
+								key: 'nova_18_th_slider_arrows_color',
 								title: i18n.__( 'Colors' ),
 								initialOpen: false,
 								colorSettings: getColors()
@@ -222,24 +222,24 @@
 				),
 				el( 'div',
 					{
-						key: 				'gbt_18_th_editor_slider_wrapper',
-						className: 			'gbt_18_th_editor_slider_wrapper',
+						key: 				'nova_18_th_editor_slider_wrapper',
+						className: 			'nova_18_th_editor_slider_wrapper',
 						'data-tab-active': 	attributes.activeTab
 					},
 					el( 'div',
 						{
-							key: 		'gbt_18_th_editor_slider_tabs',
-							className: 	'gbt_18_th_editor_slider_tabs'
+							key: 		'nova_18_th_editor_slider_tabs',
+							className: 	'nova_18_th_editor_slider_tabs'
 						},
 						getTabs()
 					),
 					el(
 						InnerBlock,
 						{
-							key: 'gbt_18_th_editor_slider_inner_blocks ',
+							key: 'nova_18_th_editor_slider_inner_blocks ',
 							template: getTemplates(),
 	                        templateLock: "all",
-	            			allowedBlocksNames: ["getbowtied/th-slide"]
+	            			allowedBlocksNames: ["nova/th-slide"]
 						},
 					),
 				),
@@ -251,14 +251,14 @@
 			return el(
 				'div',
 				{
-					key: 'gbt_18_th_slider_wrapper',
-					className: 'gbt_18_th_slider_wrapper'
+					key: 'nova_18_th_slider_wrapper',
+					className: 'nova_18_th_slider_wrapper'
 				},
 				el(
 					'div',
 					{
-						key: 'gbt_18_th_slider_container',
-						className: attributes.fullHeight ? 'shortcode_nova_slider gbt_18_th_slider_container swiper-container full_height' : 'shortcode_nova_slider gbt_18_th_slider_container swiper-container',
+						key: 'nova_18_th_slider_container',
+						className: attributes.fullHeight ? 'shortcode_nova_slider nova_18_th_slider_container swiper-container full_height' : 'shortcode_nova_slider nova_18_th_slider_container swiper-container',
 						style:
 						{
 							height: attributes.customHeight + 'px'

@@ -1,8 +1,8 @@
 <?php
 
-// [gbt_custom_button]
+// [nova_custom_link]
 
-function getbowtied_shortcode_link($atts, $content = null) {
+function nova_shortcode_link($atts, $content = null) {
 
 	extract(shortcode_atts(array(
 		"title" => "",
@@ -13,7 +13,7 @@ function getbowtied_shortcode_link($atts, $content = null) {
     ob_start();
     ?>
 
-    <a class="shortcode_gbt gbt_custom_link" href="<?php echo esc_html($url); ?>" style="color: <?php echo esc_html($color); ?>; border-color: <?php echo esc_html($color); ?>;"><?php printf(__( '%s', 'reddot' ), $title); ?></a>
+    <a class="shortcode_nova nova_custom_link" href="<?php echo esc_html($url); ?>" style="color: <?php echo esc_html($color); ?>; border-color: <?php echo esc_html($color); ?>;"><?php printf(__( '%s', 'reddot' ), $title); ?></a>
 
     <?php
     $content = ob_get_contents();
@@ -21,4 +21,4 @@ function getbowtied_shortcode_link($atts, $content = null) {
 	return $content;
 }
 
-add_shortcode("gbt_custom_link", "getbowtied_shortcode_link");
+add_shortcode("nova_custom_link", "nova_shortcode_link");

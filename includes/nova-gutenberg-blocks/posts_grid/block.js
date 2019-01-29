@@ -237,43 +237,43 @@
 					for ( let i = 0; i < posts.length; i++ ) {
 
 						let img = '';
-						let img_class = 'gbt_18_th_editor_posts_grid_noimg';
-						if ( posts[i]['fimg_url'] ) { img = posts[i]['fimg_url']; img_class = 'gbt_18_th_editor_posts_grid_with_img'; } else { img_class = 'gbt_18_th_editor_posts_grid_noimg'; img = ''; };
+						let img_class = 'nova_18_th_editor_posts_grid_noimg';
+						if ( posts[i]['fimg_url'] ) { img = posts[i]['fimg_url']; img_class = 'nova_18_th_editor_posts_grid_with_img'; } else { img_class = 'nova_18_th_editor_posts_grid_noimg'; img = ''; };
 
 						postElements.push(
 							el( "div",
 								{
-									key: 		'gbt_18_th_editor_posts_grid_item_' + posts[i].id,
-									className: 	'gbt_18_th_editor_posts_grid_item'
+									key: 		'nova_18_th_editor_posts_grid_item_' + posts[i].id,
+									className: 	'nova_18_th_editor_posts_grid_item'
 								},
 								el( "a",
 									{
-										key: 		'gbt_18_th_editor_posts_grid_item_link',
-										className: 	'gbt_18_th_editor_posts_grid_item_link'
+										key: 		'nova_18_th_editor_posts_grid_item_link',
+										className: 	'nova_18_th_editor_posts_grid_item_link'
 									},
 									el( "span",
 										{
-											key: 		'gbt_18_th_editor_posts_grid_img_container',
-											className: 	'gbt_18_th_editor_posts_grid_img_container'
+											key: 		'nova_18_th_editor_posts_grid_img_container',
+											className: 	'nova_18_th_editor_posts_grid_img_container'
 										},
 										el( "span",
 											{
-												key: 'gbt_18_th_editor_posts_grid_img_overlay',
-												className: 'gbt_18_th_editor_posts_grid_img_overlay'
+												key: 'nova_18_th_editor_posts_grid_img_overlay',
+												className: 'nova_18_th_editor_posts_grid_img_overlay'
 											}
 										),
 										el( "span",
 											{
-												key: 		'gbt_18_th_editor_posts_grid_img',
-												className: 	'gbt_18_th_editor_posts_grid_img ' + img_class,
+												key: 		'nova_18_th_editor_posts_grid_img',
+												className: 	'nova_18_th_editor_posts_grid_img ' + img_class,
 												style: 		{ backgroundImage: 'url(' + img + ')' }
 											}
 										)
 									),
 									el( "span",
 										{
-											key: 		'gbt_18_th_editor_posts_grid_title',
-											className:  'gbt_18_th_editor_posts_grid_title',
+											key: 		'nova_18_th_editor_posts_grid_title',
+											className:  'nova_18_th_editor_posts_grid_title',
 											dangerouslySetInnerHTML: { __html: posts[i]['title']['rendered'] }
 										}
 									)
@@ -466,14 +466,14 @@
 				),
 				el( 'div',
 					{
-						key: 		'gbt_18_th_posts_grid',
-						className: 	'gbt_18_th_posts_grid'
+						key: 		'nova_18_th_posts_grid',
+						className: 	'nova_18_th_posts_grid'
 					},
 					el(
 						'div',
 						{
-							key: 		'gbt_18_th_editor_posts_grid_wrapper',
-							className: 	'gbt_18_th_editor_posts_grid_wrapper columns-' + attributes.columns,
+							key: 		'nova_18_th_editor_posts_grid_wrapper',
+							className: 	'nova_18_th_editor_posts_grid_wrapper columns-' + attributes.columns,
 						},
 						attributes.result.length < 1 && attributes.doneFirstPostsLoad === false && getPosts(),
 						renderResults()

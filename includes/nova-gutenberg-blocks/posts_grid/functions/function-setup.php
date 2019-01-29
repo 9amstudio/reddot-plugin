@@ -31,7 +31,7 @@ if ( ! function_exists( 'nova_18_gutenberg_posts_grid_assets' ) ) {
 	function nova_18_gutenberg_posts_grid_assets() {
 
 		wp_enqueue_style(
-			'gbt_18_gutenberg_posts_grid_styles',
+			'nova_18_gutenberg_posts_grid_styles',
 			plugins_url( 'assets/css/style.css', dirname(__FILE__) ),
 			array(),
 			filemtime(plugin_dir_path(__FILE__) . '../assets/css/style.css')

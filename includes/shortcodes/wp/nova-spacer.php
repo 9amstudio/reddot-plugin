@@ -2,7 +2,7 @@
 
 // [nova_heading]
 function nova_shortcode_spacer($atts) {
-	$sliderrandomid = rand();
+
 	extract(shortcode_atts(array(
 		"height" 		=>  '',
 	), $atts));

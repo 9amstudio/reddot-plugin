@@ -120,7 +120,7 @@ vc_map( array(
 		),
 
 		array(
-			"type"			=> "colorpicker",
+			"type"			=> "hidden",
 			"holder"		=> "div",
 			"class" 		=> "hide_in_vc_editor",
 			"admin_label" 	=> true,
