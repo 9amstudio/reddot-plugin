@@ -20,7 +20,7 @@ function nova_shortcode_collection($atts) {
 			<div class="nova-collection__label">
 				<?php echo $label ?>
 			</div>
-			<h1 class="nova-collection__titlle"><?php echo $title ?></h1>
+			<h1 class="nova-collection__title"><?php echo $title ?></h1>
 			<p class="nova-collection__subtitle">
 				<?php echo $sub_title ?>
 			</p>
