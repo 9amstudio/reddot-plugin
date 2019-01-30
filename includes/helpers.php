@@ -322,7 +322,7 @@ if( !function_exists('nova_render_responsive_media_style_tags')) {
 
 }
 if( !function_exists('nova_shortcode_products_list')) {
-  function nova_shortcode_products_list($atts){
+  function nova_shortcode_products_list($atts, $product_type = 'recent'){
     global $woocommerce_loop;
 
     extract(shortcode_atts(array(
@@ -338,8 +338,24 @@ if( !function_exists('nova_shortcode_products_list')) {
     $cat = (!empty($category)) ? explode(',',$category) 	: '';
     $carousel_configs = nova_get_param_slider_shortcode( $atts );
     // setup query
+		$tax_query = array();
+		if($product_type == 'featured') {
+			$tax_query[] = array('relation' => 'AND');
+		  $tax_query[] =array(
+		        'taxonomy' => 'product_visibility',
+		        'field'    => 'name',
+		        'terms'    => 'featured',
+		        'operator' => 'IN',
+		      );
+		}
+		if($product_type == 'best-selling') {
+			$tax_query[] =array(
+							'key' 		=> 'total_sales',
+							'value' 	=> 0,
+							'compare' 	=> '>',
+						);
+		}
     if($cat != "") {
-
       $tax_query[] =array(
                       'taxonomy' 	=> $tax,
                       'field' 	=> 'slug',
@@ -383,11 +399,11 @@ if( !function_exists('nova_shortcode_products_list')) {
   }
 }
 if( !function_exists('nova_shortcode_products_list_ajax')) {
-  function nova_shortcode_products_list_ajax($atts){
+  function nova_shortcode_products_list_ajax($atts, $product_type = 'recent'){
     $atts = wp_json_encode($atts);
     $content = '';
     $content .= '<div class="elm-ajax-container-wrapper clearfix">';
-    	$content .= '<div class="elm-ajax-loader" data-query-settings="'.esc_attr( $atts ).'">';
+    	$content .= '<div class="elm-ajax-loader" data-query-settings="'.esc_attr( $atts ).'" data-product-type="'.esc_attr( $product_type ).'">';
       $content .= '<div class="nova-shortcode-loading"><span></span></div>';
     	$content .= '</div>';
     $content .= '</div>';
