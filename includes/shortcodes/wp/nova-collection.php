@@ -10,12 +10,21 @@ function nova_shortcode_collection($atts) {
 		"title" 		=>  '',
 		"sub_title" 		=>  '',
 		"description" 		=>  '',
+		"collection_link" => ''
 	), $atts));
+
+	$collection_link = ( '||' === $collection_link ) ? '' : $collection_link;
+	$collection_link = nova_build_link_from_atts( $collection_link );
+	$link_start = $link_end = '';
+	if ( strlen( $collection_link['url'] ) > 0 ) {
+		$link_start = '<a href="'.$collection_link['url'].'" class="button bordered nova-collection__button" target="'.$collection_link['target'].'">';
+		$link_end = '</a>';
+	}
 
 	ob_start();
 	?>
 	<div class="nova-collection">
-		<?php echo ($img_pos == 'top')? '<img src="'. wp_get_attachment_url($collection_id,'full').'" alt="" class="nova-collection__img">' : ''; ?>
+		<?php echo ($img_pos == 'top')? $link_start.'<img src="'. wp_get_attachment_url($collection_id,'full').'" alt="" class="nova-collection__img">'.$link_end : ''; ?>
 		<div class="nova-collection__inner">
 			<div class="nova-collection__label">
 				<?php echo $label ?>
@@ -28,7 +37,7 @@ function nova_shortcode_collection($atts) {
 				<?php echo $description ?>
 			</p>
 		</div>
-		<?php echo ($img_pos == 'bottom')? '<img src="'. wp_get_attachment_url($collection_id,'full').'" alt="" class="nova-collection__img">' : ''; ?>
+		<?php echo ($img_pos == 'bottom')? $link_start.'<img src="'. wp_get_attachment_url($collection_id,'full').'" alt="" class="nova-collection__img">'.$link_end : ''; ?>
 	</div>
 	<?php
 	$content = ob_get_contents();

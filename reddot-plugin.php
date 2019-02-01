@@ -28,16 +28,6 @@ if ( $theme->template != 'reddot') {
 include_once( 'includes/helpers.php' );
 include_once( 'includes/actions.php' );
 
-include_once( 'includes/shortcodes/wp/socials.php' );
-include_once( 'includes/shortcodes/wp/slider.php' );
-include_once( 'includes/shortcodes/wp/nova-banner.php' );
-include_once( 'includes/shortcodes/wp/nova-heading.php' );
-include_once( 'includes/shortcodes/wp/nova-spacer.php' );
-include_once( 'includes/shortcodes/wp/blog-posts.php' );
-include_once( 'includes/shortcodes/wp/custom-button.php' );
-include_once( 'includes/shortcodes/wp/nova-collection.php' );
-include_once( 'includes/shortcodes/wp/instagram.php' );
-
 /******************************************************************************/
 /* Include shortcode  *********************************************************/
 /******************************************************************************/
@@ -53,6 +43,7 @@ if(!function_exists('nova_include_shortcodes')) {
 		include_once( 'includes/shortcodes/wp/blog-posts.php' );
 		include_once( 'includes/shortcodes/wp/custom-button.php' );
 		include_once( 'includes/shortcodes/wp/nova-collection.php' );
+		include_once( 'includes/shortcodes/wp/instagram.php' );
 		if(class_exists( 'WooCommerce' )){
 			include_once( 'includes/shortcodes/wc/woocommerce_products_user_bought.php' );
 			include_once( 'includes/shortcodes/wc/nova_featured_products.php' );
@@ -105,7 +96,7 @@ if ( defined(  'WPB_VC_VERSION' ) ) {
 	include_once( 'class/nova-vc-autocomplete-filters.php' );
 	include_once( 'includes/vc-params.php' );
 	add_action( 'init', 'nova_visual_composer_shortcodes' );
-	new Nova_Visual_Composer();
+
 
 	if(!function_exists('nova_visual_composer_shortcodes')) {
 		function nova_visual_composer_shortcodes() {
@@ -128,24 +119,7 @@ if ( defined(  'WPB_VC_VERSION' ) ) {
 			Nova_Shortcodes_Param::get_instance();
 			Nova_Shortcodes_Autocomplete_Filters::get_instance();
 		}
-	function nova_visual_composer_shortcodes() {
-
-		// Add new WP shortcodes to VC
-
-		include_once( 'includes/shortcodes/vc/wp/slider.php' );
-		include_once( 'includes/shortcodes/vc/wp/nova-banner.php' );
-		include_once( 'includes/shortcodes/vc/wp/nova-heading.php' );
-		include_once( 'includes/shortcodes/vc/wp/nova-spacer.php' );
-		include_once( 'includes/shortcodes/vc/wp/blog-posts.php' );
-		include_once( 'includes/shortcodes/vc/wp/custom-button.php' );
-		include_once( 'includes/shortcodes/vc/wp/nova-collection.php' );
-		include_once( 'includes/shortcodes/vc/wp/instagram.php' );
-		include_once( 'includes/shortcodes/vc/wc/nova_featured_products.php' );
-		include_once( 'includes/shortcodes/vc/wc/nova_recent_products.php' );
-		include_once( 'includes/shortcodes/vc/wc/nova_best_selling_products.php' );
-		Nova_Shortcodes_Param::get_instance();
-		Nova_Shortcodes_Autocomplete_Filters::get_instance();
-	}
+  }
 }
 
 /******************************************************************************/

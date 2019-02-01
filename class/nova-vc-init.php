@@ -278,3 +278,4 @@ class Nova_Visual_Composer{
     }
 
 }
+new Nova_Visual_Composer();
