@@ -30,6 +30,13 @@
 		"oAP": "/class/nova-vc-shortcode-param.php",
 		"oF": 0
 		},
+	"/includes/actions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/actions.php",
+		"oF": 0
+		},
 	"/includes/helpers.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -402,11 +409,25 @@
 		"oAP": "/includes/nova-gutenberg-blocks/social_media_profiles/block.php",
 		"oF": 0
 		},
+	"/includes/shortcodes/vc/wc/nova_best_selling_products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wc/nova_best_selling_products.php",
+		"oF": 0
+		},
 	"/includes/shortcodes/vc/wc/nova_featured_products.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/vc/wc/nova_featured_products.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/vc/wc/nova_recent_products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wc/nova_recent_products.php",
 		"oF": 0
 		},
 	"/includes/shortcodes/vc/wp/blog-posts.php": {
@@ -423,11 +444,25 @@
 		"oAP": "/includes/shortcodes/vc/wp/custom-button.php",
 		"oF": 0
 		},
+	"/includes/shortcodes/vc/wp/instagram.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wp/instagram.php",
+		"oF": 0
+		},
 	"/includes/shortcodes/vc/wp/nova-banner.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/vc/wp/nova-banner.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/vc/wp/nova-collection.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/vc/wp/nova-collection.php",
 		"oF": 0
 		},
 	"/includes/shortcodes/vc/wp/nova-heading.php": {
@@ -451,11 +486,25 @@
 		"oAP": "/includes/shortcodes/vc/wp/slider.php",
 		"oF": 0
 		},
+	"/includes/shortcodes/wc/nova_best_selling_products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wc/nova_best_selling_products.php",
+		"oF": 0
+		},
 	"/includes/shortcodes/wc/nova_featured_products.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/wc/nova_featured_products.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/wc/nova_recent_products.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wc/nova_recent_products.php",
 		"oF": 0
 		},
 	"/includes/shortcodes/wc/woocommerce_products_user_bought.php": {
@@ -479,11 +528,25 @@
 		"oAP": "/includes/shortcodes/wp/custom-button.php",
 		"oF": 0
 		},
+	"/includes/shortcodes/wp/instagram.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wp/instagram.php",
+		"oF": 0
+		},
 	"/includes/shortcodes/wp/nova-banner.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/includes/shortcodes/wp/nova-banner.php",
+		"oF": 0
+		},
+	"/includes/shortcodes/wp/nova-collection.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/includes/shortcodes/wp/nova-collection.php",
 		"oF": 0
 		},
 	"/includes/shortcodes/wp/nova-heading.php": {

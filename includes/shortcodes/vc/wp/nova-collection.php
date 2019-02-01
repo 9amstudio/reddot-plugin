@@ -1,7 +1,7 @@
 <?php
 
 /*
-**	Nova Spacer
+**	Nova Collection
 */
 
 vc_map(array(
