@@ -4,9 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 if( !function_exists('nova_ajax_render_shortcode')) {
   function nova_ajax_render_shortcode() {
+			$type = isset($_REQUEST['type']) ? $_REQUEST['type'] : '';
       $data = isset($_REQUEST['data']) ? $_REQUEST['data'] : '';
-      if(!empty($data) ) {
-          echo nova_shortcode_products_list($data);
+      if(!empty($type) && !empty($data) ) {
+          echo nova_shortcode_products_list($data,$type);
       }
       die();
   }

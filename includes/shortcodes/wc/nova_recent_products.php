@@ -15,8 +15,8 @@ function nova_recent_products($atts){
 		'enable_ajax_loader' 	=> '',
 	), $atts));
 	if(!empty($enable_ajax_loader)){
-		return nova_shortcode_products_list_ajax($atts);
+		return nova_shortcode_products_list_ajax($atts,'recent');
 	}else {
-		return nova_shortcode_products_list($atts);
+		return nova_shortcode_products_list($atts,'recent');
 	}
 }

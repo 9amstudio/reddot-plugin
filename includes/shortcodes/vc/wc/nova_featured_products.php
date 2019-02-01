@@ -80,7 +80,18 @@ $shortcode_params = array(
       'min' => -1,
       'max' => 1000,
       'group' 		=> __('Layout Setting', 'reddot-plugin')
-  )
+  ),
+  array(
+    'type' => 'checkbox',
+    'heading' => __( 'Enable Ajax Loading', 'reddot-plugin' ),
+    'param_name' => 'enable_ajax_loader',
+    'value' => array( __( 'Yes', 'reddot-plugin' ) => 'yes' ),
+    'group' 		=> __('Layout Setting', 'reddot-plugin'),
+    'dependency' => array(
+        'element' => 'layout',
+        'value' => 'grid'
+    )
+)
 );
 $carousel = nova_vc_slider_params();
 $slides_column_idx = nova_get_param_index( $carousel, 'slides_column');
