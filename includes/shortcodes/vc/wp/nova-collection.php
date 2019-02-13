@@ -29,6 +29,16 @@ vc_map(array(
 			),
 			'std'         => 'bottom'
 		),
+    array(
+			'type' => 'vc_link',
+			'heading' => esc_html__('Collection Link', 'reddot-plugin'),
+			'param_name' => 'collection_link',
+			'description' => esc_html__('Add link / select existing page to link to this collection', 'reddot-plugin'),
+			'dependency' => array(
+				'element'   => 'collection_id',
+				'not_empty'     => true
+			)
+		),
 		array(
 			'type' => 'textfield',
 			'heading' => esc_html__('Label', 'reddot-plugin'),

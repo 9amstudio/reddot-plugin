@@ -27,7 +27,7 @@ function nova_shortcode_instagram_feed($atts) {
 
   ?>
 
-  <div class="nova-instagram-feeds" id="<?php echo esc_attr( $unique_id ) ?>" data-feed_config='<?php echo esc_attr( wp_json_encode( array(
+  <div class="nova-instagram-feeds" data-feed_config='<?php echo esc_attr( wp_json_encode( array(
 		'get' => $feed_type,
 		'tagName' => $hashtag,
 		'locationId' => $location_id,
@@ -35,12 +35,12 @@ function nova_shortcode_instagram_feed($atts) {
 		'sortBy' => $sort_by,
 		'limit' => $limit,
 		'resolution' => $image_size,
-		'template' => '<li class="instagram-feed"><div class="instagram-item"><a target="_blank" href="{{link}}" title="{{caption}}" style="background-image: url({{image}});" class="thumbnail"><span class="item--overlay"><i class="fa fa-instagram"></i></span></a><div class="instagram-info"><span class="instagram-like"><i class="fa-heart"></i>{{likes}}</span><span class="instagram-comments"><i class="fa-comments"></i>{{comments}}</span></div></div></li>'
+		'template' => '<li class="instagram-feed image-as-' . $image_aspect_ration . '"><div class="instagram-item"><a target="_blank" href="{{link}}" title="{{caption}}" style="background-image: url({{image}});" class="thumbnail"><span class="item--overlay"><i class="fa fa-instagram"></i></span></a><div class="instagram-info"><span class="instagram-like"><i class="fa fa-heart"></i>{{likes}}</span><span class="instagram-comments"><i class="fa fa-comments"></i>{{comments}}</span></div></div></li>'
 	) ) ) ?>' data-instagram_token="<?php echo esc_attr( $instagram_token ) ?>">
   <?php if ($enable_carousel):?>
-    <ul class="instagram-feeds slick-carousel" <?php echo $carousel_configs ?>>
+    <ul id="<?php echo esc_attr( $unique_id ) ?>" class="instagram-feeds slick-carousel" <?php echo $carousel_configs ?>>
   <?php else:?>
-    <ul class="instagram-feeds columns-<?php echo $column ?>">
+    <ul id="<?php echo esc_attr( $unique_id ) ?>" class="instagram-feeds columns-<?php echo $column ?>">
   <?php endif ?>
     </ul>
   </div>

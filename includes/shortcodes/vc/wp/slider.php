@@ -110,12 +110,12 @@ vc_map( array(
 		),
 
 		array(
-			"type"			=> "textarea",
+			"type"			=> "textarea_html",
 			"holder"		=> "div",
 			"class" 		=> "hide_in_vc_editor",
 			"admin_label" 	=> true,
 			"heading"		=> "Description",
-			"param_name"	=> "description",
+			"param_name"	=> "content",
 			"value"			=> "",
 		),
 

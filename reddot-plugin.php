@@ -110,6 +110,7 @@ if ( defined(  'WPB_VC_VERSION' ) ) {
 			include_once( 'includes/shortcodes/vc/wp/blog-posts.php' );
 			include_once( 'includes/shortcodes/vc/wp/custom-button.php' );
 			include_once( 'includes/shortcodes/vc/wp/nova-collection.php' );
+			include_once( 'includes/shortcodes/vc/wp/instagram.php' );
 			if(class_exists( 'WooCommerce' )){
 				include_once( 'includes/shortcodes/vc/wc/nova_featured_products.php' );
 				include_once( 'includes/shortcodes/vc/wc/nova_recent_products.php' );
