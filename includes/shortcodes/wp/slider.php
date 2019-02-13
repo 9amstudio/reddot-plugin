@@ -74,7 +74,7 @@ function nova_slider( $params = array(), $content = null ) {
     if ( $slide_numbers ):
     	$nova_slider .= '<div class="quickview-pagination shortcode-slider-pagination" style="color: ' . $slide_numbers_color . '"></div>';
     endif;
-	
+
 	$nova_slider .= '
 		    <!-- Control -->
 			<div class="control-slider control-slider--vertical swiper-control">
@@ -145,7 +145,7 @@ function nova_image_slide( $params = array(), $content = null ) {
 	array_push( $slide_image_data, array( 'slide_image' => $bg_image, 'button_text' => $button_text, 'button_color' => $button_color, 'button_url' => $button_url ) );
 
 	if ( !empty( $description ) ) {
-		$description = '<p class="slide-description"><span class="down-up"><span>' . $description . '</span></span></p>';
+		$description = '<div class="slide-description"><span class="down-up"><span>' . do_shortcode( $content ) . '</span></span></div>';
 	} else {
 		$description = "";
 	}

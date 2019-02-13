@@ -17,8 +17,8 @@ function nova_shortcode_collection($atts) {
 	$collection_link = nova_build_link_from_atts( $collection_link );
 	$link_start = $link_end = '';
 	if ( strlen( $collection_link['url'] ) > 0 ) {
-		$link_start = '<a href="'.$collection_link['url'].'" class="button bordered nova-collection__button" target="'.$collection_link['target'].'">';
-		$link_end = '</a>';
+		$link_start = '<a href="'.$collection_link['url'].'" class="nova-collection__link" target="'.$collection_link['target'].'">';
+		$link_end = '<div class="nova-collection__icon"><i class="reddot-icons-arrow-right"></i><svg class="svg-icon"><use xlink:href="#reddot-arrow-right"></use></svg></div></a>';
 	}
 
 	ob_start();
