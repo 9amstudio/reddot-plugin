@@ -23,6 +23,13 @@
 		"oAP": "/class/nova-vc-autocomplete-filters.php",
 		"oF": 0
 		},
+	"/class/nova-vc-init.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/class/nova-vc-init.php",
+		"oF": 0
+		},
 	"/class/nova-vc-shortcode-param.php": {
 		"cB": 0,
 		"ft": 8192,
