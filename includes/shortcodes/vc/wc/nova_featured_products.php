@@ -94,10 +94,6 @@ $shortcode_params = array(
 )
 );
 $carousel = nova_vc_slider_params();
-$slides_column_idx = nova_get_param_index( $carousel, 'slides_column');
-if($slides_column_idx){
-    unset($carousel[$slides_column_idx]);
-}
 $shortcode_params = array_merge( $shortcode_params, $carousel);
 vc_map(array(
 

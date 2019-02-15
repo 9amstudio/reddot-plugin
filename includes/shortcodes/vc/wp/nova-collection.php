@@ -1,7 +1,7 @@
 <?php
 
 /*
-**	Nova Collection
+**	reddot-plugin Collection
 */
 
 vc_map(array(
@@ -20,7 +20,7 @@ vc_map(array(
 			'param_name' => 'collection_id'
 		),
 		array(
-			'heading'     => esc_html__( 'Image Position', 'nova' ),
+			'heading'     => esc_html__( 'Image Position', 'reddot-plugin' ),
 			'type'        => 'dropdown',
 			'param_name'  => 'img_pos',
 			'value'       => array(

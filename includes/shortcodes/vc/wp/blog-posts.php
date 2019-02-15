@@ -25,12 +25,12 @@ $output_categories = array();
 
 $output_categories["All"] = "";
 
-foreach($categories as $category) { 
+foreach($categories as $category) {
 	$output_categories[wp_specialchars_decode($category->name)] = $category->slug;
 }
 
 vc_map(array(
-   
+
    "name"			=> "Blog Posts",
    "category"		=> "Content",
    "description"	=> "Display the latest posts in the blog",
@@ -38,9 +38,9 @@ vc_map(array(
    "class"			=> "",
    "icon"			=> "icon-wpb-wp",
 
-   
+
    "params" 	=> array(
-      
+
 		array(
 			"type" => "textfield",
 			"holder" => "div",
@@ -51,7 +51,7 @@ vc_map(array(
 			"value" => "9",
 			"description" => "Number of posts to be displayed in the slider."
 		),
-		
+
 		array(
 			"type" => "dropdown",
 			"holder" => "div",
@@ -62,5 +62,5 @@ vc_map(array(
 			"value" => $output_categories
 		),
    )
-   
+
 ));
