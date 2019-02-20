@@ -44,7 +44,7 @@ class Nova_Shortcodes_Param{
 
         $require = sprintf(
             '<div class="simplify"><span class="la-vc-icon"><div class="la-vc-tooltip simplify-options">%s</div><i class="simplify-icon dashicons dashicons-arrow-right-alt2"></i></span></div>',
-            __('Responsive Options', 'reddot')
+            __('Responsive Options', 'nova')
         );
         $html  = '<div class="nova-responsive-wrapper" id="'.$uid.'"><div class="nova-responsive-items">';
 
@@ -55,7 +55,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="fa fa-desktop"></i>',
-                        __('Large Desktop', 'reddot'),
+                        __('Large Desktop', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -66,7 +66,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'required',
                         '<i class="dashicons dashicons-desktop"></i>',
-                        __('Desktop', 'reddot'),
+                        __('Desktop', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -78,7 +78,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-tablet" style="transform: rotate(90deg);"></i>',
-                        __('Tablet', 'reddot'),
+                        __('Tablet', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -90,7 +90,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-tablet"></i>',
-                        __('Tablet Portrait', 'reddot'),
+                        __('Tablet Portrait', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -101,7 +101,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-smartphone" style="transform: rotate(90deg);"></i>',
-                        __('Mobile Landscape', 'reddot'),
+                        __('Mobile Landscape', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -111,7 +111,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-smartphone"></i>',
-                        __('Mobile', 'reddot'),
+                        __('Mobile', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -191,12 +191,12 @@ class Nova_Shortcodes_Param{
         $uni = uniqid();
         $output = '<div class="vc_ug_control" data-uniqid="'.$uni.'" data-color1="'.$color1.'" data-color2="'.$color2.'">';
         $output .= '<select id="grad_type'.$uni.'" class="grad_type" data-uniqid="'.$uni.'">
-				<option value="vertical">'.__('Vertical', 'reddot').'</option>
-				<option value="horizontal">'.__('Horizontal', 'reddot').'</option>
-				<option value="custom">'.__('Custom', 'reddot').'</option>
+				<option value="vertical">'.__('Vertical', 'nova').'</option>
+				<option value="horizontal">'.__('Horizontal', 'nova').'</option>
+				<option value="custom">'.__('Custom', 'nova').'</option>
 			</select>
 			<div id="grad_type_custom_wrapper'.$uni.'" class="grad_type_custom_wrapper" style="display:none;"><input type="number" id="grad_type_custom'.$uni.'" placeholder="45" data-uniqid="'.$uni.'" class="grad_custom" style="width: 200px; margin-bottom: 10px;"/> deg</div>';
-        $output .= '<div class="wpb_element_label" style="margin-top: 10px;">'.__('Choose Colors', 'reddot').'</div>';
+        $output .= '<div class="wpb_element_label" style="margin-top: 10px;">'.__('Choose Colors', 'nova').'</div>';
         $output .= '<div class="grad_hold" id="grad_hold'.$uni.'"></div>';
         $output .= '<div class="grad_trgt" id="grad_target'.$uni.'"></div>';
 

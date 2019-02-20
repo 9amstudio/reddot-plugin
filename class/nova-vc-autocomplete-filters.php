@@ -167,11 +167,11 @@ class Nova_Shortcodes_Autocomplete_Filters{
             foreach ( $array_category as $value ) {
                 $data = array();
                 $data[ 'value' ] = $slug ? $value[ 'slug' ] : $value[ 'id' ];
-                $data[ 'label' ] = __( 'Id', 'reddot' ) . ': ' .
+                $data[ 'label' ] = __( 'Id', 'nova' ) . ': ' .
                     $value[ 'id' ] .
-                    ( ( strlen( $value[ 'name' ] ) > 0 ) ? ' - ' . __( 'Name', 'reddot' ) . ': ' .
+                    ( ( strlen( $value[ 'name' ] ) > 0 ) ? ' - ' . __( 'Name', 'nova' ) . ': ' .
                         $value[ 'name' ] : '' ) .
-                    ( ( strlen( $value[ 'slug' ] ) > 0 ) ? ' - ' . __( 'Slug', 'reddot' ) . ': ' .
+                    ( ( strlen( $value[ 'slug' ] ) > 0 ) ? ' - ' . __( 'Slug', 'nova' ) . ': ' .
                         $value[ 'slug' ] : '' );
                 $result[ ] = $data;
             }
@@ -202,15 +202,15 @@ class Nova_Shortcodes_Autocomplete_Filters{
 
         $term_slug_display = '';
         if ( !empty( $term_slug ) ) {
-            $term_slug_display = ' - ' . __( 'Slug', 'reddot' ) . ': ' . $term_slug;
+            $term_slug_display = ' - ' . __( 'Slug', 'nova' ) . ': ' . $term_slug;
         }
 
         $term_title_display = '';
         if ( !empty( $term_title ) ) {
-            $term_title_display = ' - ' . __( 'Title', 'reddot' ) . ': ' . $term_title;
+            $term_title_display = ' - ' . __( 'Title', 'nova' ) . ': ' . $term_title;
         }
 
-        $term_id_display = __( 'Id', 'reddot' ) . ': ' . $term_id;
+        $term_id_display = __( 'Id', 'nova' ) . ': ' . $term_id;
 
         $data = array();
         $data[ 'value' ] = $slug ? $term_slug : $term_id;
@@ -239,9 +239,9 @@ class Nova_Shortcodes_Autocomplete_Filters{
             foreach ( $array_posts as $value ) {
                 $data = array();
                 $data[ 'value' ] = $value[ 'id' ];
-                $data[ 'label' ] = __( 'Id', 'reddot' ) . ': ' .
+                $data[ 'label' ] = __( 'Id', 'nova' ) . ': ' .
                     $value[ 'id' ] .
-                    ( ( strlen( $value[ 'title' ] ) > 0 ) ? ' - ' . __( 'Title', 'reddot' ) . ': ' .
+                    ( ( strlen( $value[ 'title' ] ) > 0 ) ? ' - ' . __( 'Title', 'nova' ) . ': ' .
                         $value[ 'title' ] : '' );
                 $results[ ] = $data;
             }
@@ -259,13 +259,13 @@ class Nova_Shortcodes_Autocomplete_Filters{
                 $post_id = $post_object->ID;
                 $post_slug_display = '';
                 if ( !empty( $slug ) ) {
-                    $post_slug_display = ' - ' . __( 'Slug', 'reddot' ) . ': ' . $slug;
+                    $post_slug_display = ' - ' . __( 'Slug', 'nova' ) . ': ' . $slug;
                 }
                 $post_title_display = '';
                 if ( !empty( $title ) ) {
-                    $post_title_display = ' - ' . __( 'Title', 'reddot' ) . ': ' . $title;
+                    $post_title_display = ' - ' . __( 'Title', 'nova' ) . ': ' . $title;
                 }
-                $post_id_display = __( 'Id', 'reddot' ) . ': ' . $post_id;
+                $post_id_display = __( 'Id', 'nova' ) . ': ' . $post_id;
                 $data = array();
                 $data[ 'value' ] = $post_id;
                 $data[ 'label' ] = $post_id_display . $post_title_display . $post_slug_display;
