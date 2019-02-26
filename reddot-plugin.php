@@ -3,9 +3,11 @@
 	 * Plugin Name: Reddot Plugin
 	 * Plugin URI: https://reddot.nineamstudio.com/
 	 * Description: The plugin for Reddot Woocommerce WordPress Theme
-	 * Version: 1.0.0
 	 * Author: 9AMstudio
 	 * Author URI: https://nineamstudio.com
+	 * Version:          1.0.0
+	 * GitHub Theme URI: https://github.com/9amstudio/reddot-plugin
+	 * GitHub Branch:    master
 	 * Requires at least: 5.0
 	 * Tested up to: 5.0
 	 *
