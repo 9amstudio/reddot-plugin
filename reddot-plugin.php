@@ -15,7 +15,6 @@
 	 * Requires WP:       4.6
 	 * Requires PHP:      5.6
 	 */
-	 */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
