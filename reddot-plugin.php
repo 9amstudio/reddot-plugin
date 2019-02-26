@@ -6,13 +6,15 @@
 	 * Author: 9AMstudio
 	 * Author URI: https://nineamstudio.com
 	 * Version:          1.0.0
-	 * GitHub Theme URI: https://github.com/9amstudio/reddot-plugin
-	 * GitHub Branch:    master
-	 * Requires at least: 5.0
-	 * Tested up to: 5.0
-	 *
-	 * @package  Reddot Plugin
-	 * @author 9AMstudio
+	 * License:           GNU General Public License v2
+	 * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
+	 * Domain Path:       /languages
+	 * Text Domain:       reddot-plugin
+	 * Network:           true
+	 * GitHub Plugin URI: hhttps://github.com/9amstudio/reddot-plugin
+	 * Requires WP:       4.6
+	 * Requires PHP:      5.6
+	 */
 	 */
 
 if ( ! defined( 'ABSPATH' ) ) {
