@@ -227,7 +227,7 @@ if( !function_exists('nova_field_column')) {
   function nova_field_column($options = array()){
       return array_merge(array(
           'type' 			=> 'nova_column',
-          'heading' 		=> __('Column', 'reddot'),
+          'heading' 		=> esc_html__('Column', 'reddot'),
           'param_name' 	=> 'column',
           'unit'			=> '',
           'media'			=> array(

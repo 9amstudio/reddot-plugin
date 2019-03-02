@@ -16,7 +16,7 @@ vc_map(array(
    "params" 	=> array(
      array(
          'type' 			=> 'nova_column',
-         'heading' 		=> __('Space Height', 'reddot-plugin'),
+         'heading' 		=> esc_html__('Space Height', 'reddot-plugin'),
          'admin_label'   => true,
          'param_name' 	=> 'height',
          'unit'			=> 'px',

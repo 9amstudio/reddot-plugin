@@ -74,7 +74,7 @@ $shortcode_params = array(
           esc_html__('Slider','reddot-plugin') => 'slider'
       ),
       'std' => 'grid',
-      'group' 		=> __('Layout Setting', 'reddot-plugin')
+      'group' 		=> esc_html__('Layout Setting', 'reddot-plugin')
   ),
   array(
       'type' => 'dropdown',
@@ -136,7 +136,7 @@ vc_map(array(
 
    "name"			=> "Instagram Feed",
    "category"		=> "9AMstudio",
-   "description"	=> __( 'Display Instagram photos from any non-private Instagram accounts', 'reddot-plugin' ),
+   "description"	=> esc_html__( 'Display Instagram photos from any non-private Instagram accounts', 'reddot-plugin' ),
    "base"			=> "instagram_feed",
    "class"			=> "",
    "icon"			=> get_template_directory_uri() . "/assets/images/vc/instagram.png",

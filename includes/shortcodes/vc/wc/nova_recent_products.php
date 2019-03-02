@@ -2,14 +2,14 @@
 $shortcode_params = array(
   array(
       'type' => 'autocomplete',
-      'heading' => __( 'Categories', 'reddot-plugin' ),
+      'heading' => esc_html__( 'Categories', 'reddot-plugin' ),
       'param_name' => 'category',
       'settings' => array(
           'multiple' => true,
           'sortable' => true,
       ),
       'save_always' => true,
-      'group' 		=> __('Data Setting', 'reddot-plugin')
+      'group' 		=> esc_html__('Data Setting', 'reddot-plugin')
   ),
   array(
       'type' => 'dropdown',
@@ -26,8 +26,8 @@ $shortcode_params = array(
           esc_html__( 'Title', 'reddot-plugin' ) => 'title'
       ),
       'save_always' => true,
-      'group' 		=> __('Data Setting', 'reddot-plugin'),
-      'description' => sprintf( __( 'Select how to sort retrieved products. More at %s.', 'reddot-plugin' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
+      'group' 		=> esc_html__('Data Setting', 'reddot-plugin'),
+      'description' => sprintf( esc_html__( 'Select how to sort retrieved products. More at %s.', 'reddot-plugin' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
   ),
   array(
       'type' => 'dropdown',
@@ -39,8 +39,8 @@ $shortcode_params = array(
           esc_html__( 'Ascending', 'reddot-plugin' ) => 'ASC',
       ),
       'save_always' => true,
-      'group' 		=> __('Data Setting', 'reddot-plugin'),
-      'description' => sprintf( __( 'Designates the ascending or descending order. More at %s.', 'reddot-plugin' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
+      'group' 		=> esc_html__('Data Setting', 'reddot-plugin'),
+      'description' => sprintf( esc_html__( 'Designates the ascending or descending order. More at %s.', 'reddot-plugin' ), '<a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">WordPress codex page</a>' ),
   ),
   array(
       'type' => 'dropdown',
@@ -51,7 +51,7 @@ $shortcode_params = array(
           esc_html__('Slider','reddot-plugin') => 'slider'
       ),
       'std' => 'grid',
-      'group' 		=> __('Layout Setting', 'reddot-plugin')
+      'group' 		=> esc_html__('Layout Setting', 'reddot-plugin')
   ),
   array(
       'type' => 'dropdown',
@@ -65,7 +65,7 @@ $shortcode_params = array(
           esc_html__('6 Columns','reddot-plugin') => '6'
       ),
       'std' => '4',
-      'group' 		=> __('Layout Setting', 'reddot-plugin'),
+      'group' 		=> esc_html__('Layout Setting', 'reddot-plugin'),
       'dependency' => array(
           'element' => 'layout',
           'value' => 'grid'
@@ -79,14 +79,14 @@ $shortcode_params = array(
       'value' => 12,
       'min' => -1,
       'max' => 1000,
-      'group' 		=> __('Layout Setting', 'reddot-plugin')
+      'group' 		=> esc_html__('Layout Setting', 'reddot-plugin')
   ),
   array(
     'type' => 'checkbox',
-    'heading' => __( 'Enable Ajax Loading', 'reddot-plugin' ),
+    'heading' => esc_html__( 'Enable Ajax Loading', 'reddot-plugin' ),
     'param_name' => 'enable_ajax_loader',
-    'value' => array( __( 'Yes', 'reddot-plugin' ) => 'yes' ),
-    'group' 		=> __('Layout Setting', 'reddot-plugin'),
+    'value' => array( esc_html__( 'Yes', 'reddot-plugin' ) => 'yes' ),
+    'group' 		=> esc_html__('Layout Setting', 'reddot-plugin'),
     'dependency' => array(
         'element' => 'layout',
         'value' => 'grid'
@@ -99,7 +99,7 @@ vc_map(array(
 
    "name"			=> "Nova recent products",
    "category"		=> "9AMstudio",
-   "description"	=> __( 'Display featured products', 'reddot-plugin' ),
+   "description"	=> esc_html__( 'Display featured products', 'reddot-plugin' ),
    "base"			=> "nova_recent_products",
    "class"			=> "",
    "icon"			=> get_template_directory_uri() . "/assets/images/vc/wc.png",

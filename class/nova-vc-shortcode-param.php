@@ -44,7 +44,7 @@ class Nova_Shortcodes_Param{
 
         $require = sprintf(
             '<div class="simplify"><span class="la-vc-icon"><div class="la-vc-tooltip simplify-options">%s</div><i class="simplify-icon dashicons dashicons-arrow-right-alt2"></i></span></div>',
-            __('Responsive Options', 'nova')
+            esc_html__('Responsive Options', 'nova')
         );
         $html  = '<div class="nova-responsive-wrapper" id="'.$uid.'"><div class="nova-responsive-items">';
 
@@ -55,7 +55,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="fa fa-desktop"></i>',
-                        __('Large Desktop', 'nova'),
+                        esc_html__('Large Desktop', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -66,7 +66,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'required',
                         '<i class="dashicons dashicons-desktop"></i>',
-                        __('Desktop', 'nova'),
+                        esc_html__('Desktop', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -78,7 +78,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-tablet" style="transform: rotate(90deg);"></i>',
-                        __('Tablet', 'nova'),
+                        esc_html__('Tablet', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -90,7 +90,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-tablet"></i>',
-                        __('Tablet Portrait', 'nova'),
+                        esc_html__('Tablet Portrait', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -101,7 +101,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-smartphone" style="transform: rotate(90deg);"></i>',
-                        __('Mobile Landscape', 'nova'),
+                        esc_html__('Mobile Landscape', 'nova'),
                         $default_value,
                         $unit,
                         $key
@@ -111,7 +111,7 @@ class Nova_Shortcodes_Param{
                     $html .= $this->getParamMedia(
                         'optional',
                         '<i class="dashicons dashicons-smartphone"></i>',
-                        __('Mobile', 'nova'),
+                        esc_html__('Mobile', 'nova'),
                         $default_value,
                         $unit,
                         $key

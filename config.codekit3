@@ -591,6 +591,13 @@
 		"oAP": "/includes/vc-params.php",
 		"oF": 0
 		},
+	"/languages/reddot-plugin.pot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/languages/reddot-plugin.pot",
+		"oF": 0
+		},
 	"/LICENSE.txt": {
 		"cB": 0,
 		"ft": 8192,

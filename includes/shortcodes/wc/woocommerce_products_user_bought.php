@@ -1,7 +1,7 @@
 <?php
 add_shortcode( 'my_products', 'nova_user_bought_products' );
 
-function nova_user_bought_products() { 
+function nova_user_bought_products() {
 	$customer_orders = wc_get_orders( apply_filters( 'woocommerce_my_account_my_orders_query', array( 'customer' => get_current_user_id()) ) );
 	$products_in = array();
 	foreach ( $customer_orders as $customer_order ) :
@@ -31,6 +31,6 @@ function nova_user_bought_products() {
 	}
 	wp_reset_postdata();
 
-	return '<h6>'.__('Your Products', 'woocommerce') .'</h6>'.
+	return '<h6>'.__('Your Products', 'reddot-plugin') .'</h6>'.
 	'<ul class="products woocommerce columns-4">' . ob_get_clean() . '</ul>';
 }
