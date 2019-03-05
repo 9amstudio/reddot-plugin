@@ -348,7 +348,7 @@ class Nova_Shortcodes_Param{
                                     jQuery(tid).val('');
                             },
                             onInit: function(cssGradient){
-                                //console.log(jQuery(tid).val())
+
                                 //check_for_orientation();
 
                             }
