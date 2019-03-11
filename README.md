@@ -1,4 +1,4 @@
-=== The Hanger Extender ===
+=== Reddot Addons Plugin ===
 Contributors:  9amstudio, novaworks, dzungnova
 Tags: gutenberg, blocks
 Requires at least: 5.0
