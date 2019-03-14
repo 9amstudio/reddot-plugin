@@ -410,3 +410,27 @@ if( !function_exists('nova_shortcode_products_list_ajax')) {
     return $content;
   }
 }
+
+function nova_get_changeset_url () {
+
+	$uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+	$changeset_url = 'http://' . $_SERVER['HTTP_HOST'] . $uri_parts[0];
+
+	if (isset($_GET["nova-changeset"]))
+	{
+	  $nova_changeset = $_GET["nova-changeset"];
+	} else {
+	  $nova_changeset = "";
+	}
+	if ($nova_changeset != "") {
+		if ($nova_changeset != "default") {
+			$data = array('customize_changeset_uuid'=>$nova_changeset);
+			$queryString =  http_build_query($data);
+			wp_redirect($changeset_url.'?'.$queryString);
+			exit;
+		}else {
+			wp_redirect($changeset_url);
+			exit;
+		}
+	}
+}

@@ -31,6 +31,10 @@ if ( $theme->template != 'reddot') {
 include_once( 'includes/helpers.php' );
 include_once( 'includes/actions.php' );
 
+// Meta Boxes
+include_once( 'includes/metaboxes/page.php' );
+
+
 /******************************************************************************/
 /* Include shortcode  *********************************************************/
 /******************************************************************************/
