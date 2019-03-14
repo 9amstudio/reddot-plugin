@@ -1,0 +1,18 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "nineamstudio.com",
+  "target": "web/reddot.nineamstudio.com/public_html/wp-content/plugins/reddot-plugin",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "admin",
+  "password": "novaworks2014.",
+  "watch": [],
+  "transport": "scp"
+}
