@@ -14,4 +14,3 @@ if( !function_exists('nova_ajax_render_shortcode')) {
 }
 add_action( 'wp_ajax_nova_get_shortcode_loader_by_ajax', 'nova_ajax_render_shortcode' );
 add_action( 'wp_ajax_nopriv_nova_get_shortcode_loader_by_ajax', 'nova_ajax_render_shortcode' );
-add_action('woocommerce_single_product_summary', 'nova_single_product_share', 40);

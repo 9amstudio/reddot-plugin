@@ -410,50 +410,31 @@ if( !function_exists('nova_shortcode_products_list_ajax')) {
     return $content;
   }
 }
-//==============================================================================
-// Add tabs after add to cart button & right after Wishlist button
-//==============================================================================
+if( !function_exists('nova_get_changeset_url')) {
+	function nova_get_changeset_url () {
 
-if( ! function_exists('nova_single_product_share') ):
-	function nova_single_product_share() {
-		global $post, $product;
+		$uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+		$changeset_url = 'http://' . $_SERVER['HTTP_HOST'] . $uri_parts[0];
 
-		$src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false, ''); //Get the Thumbnail URL
-		$html  = '<div class="woocommerce-product-details__share-box">';
-			$html .= '<span class="woocommerce-product-details__share-box--label">';
-			$html .= esc_html__('Share on', 'reddot');
-			// FB Icons
-			$html .= '</span>';
-
-			$html .= '<a href="//www.facebook.com/sharer/sharer.php?u=' . get_permalink() . '" target="_blank"><i class="fa fa-facebook"></i></a>';
-			$html .= '<a href="//twitter.com/share?url=' . get_permalink() . '" target="_blank"><i class="fa fa-twitter"></i></a>';
-			$html .= '<a href="//pinterest.com/pin/create/button/?url= '. get_permalink() .'&amp;media= '. esc_url($src[0]) .'&amp;description= ' . urlencode(get_the_title()) .'"><i class="fa fa-pinterest"></i></a>';
-			$html .= '<a target="_blank" href="https://plus.google.com/share?url='. get_permalink() .'" rel="nofollow" class="google-plus" title data-original-title="'.esc_attr__('Share this post on Google Plus', 'reddot').'"><i class="fa fa-google-plus"></i></a>';
-		$html .= '</div>';
-		print wp_kses_post($html);
-	}
-endif;
-
-function nova_get_changeset_url () {
-
-	$uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
-	$changeset_url = 'http://' . $_SERVER['HTTP_HOST'] . $uri_parts[0];
-
-	if (isset($_GET["nova-changeset"]))
-	{
-	  $nova_changeset = $_GET["nova-changeset"];
-	} else {
-	  $nova_changeset = "";
-	}
-	if ($nova_changeset != "") {
-		if ($nova_changeset != "default") {
-			$data = array('customize_changeset_uuid'=>$nova_changeset);
-			$queryString =  http_build_query($data);
-			wp_redirect($changeset_url.'?'.$queryString);
-			exit;
-		}else {
-			wp_redirect($changeset_url);
-			exit;
+		if (isset($_GET["nova-changeset"]))
+		{
+		  $nova_changeset = $_GET["nova-changeset"];
+		} else {
+		  $nova_changeset = "";
+		}
+		if ($nova_changeset != "") {
+			if ($nova_changeset != "default") {
+				$data = array('customize_changeset_uuid'=>$nova_changeset);
+				$queryString =  http_build_query($data);
+				wp_redirect($changeset_url.'?'.$queryString);
+				exit;
+			}else {
+				wp_redirect($changeset_url);
+				exit;
+			}
 		}
 	}
+}
+if( function_exists('nova_get_changeset_url')) {
+  nova_get_changeset_url();
 }
