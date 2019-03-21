@@ -410,6 +410,25 @@ if( !function_exists('nova_shortcode_products_list_ajax')) {
     return $content;
   }
 }
+if( !function_exists('nova_redirect')) {
+	function nova_redirect( $location, $status = 302, $x_redirect_by = 'WordPress' ) {
+	    global $is_IIS;
+
+	    if ( ! $location ) {
+	        return false;
+	    }
+
+	    //$location = wp_sanitize_redirect( $location );
+
+	    if ( ! $is_IIS && PHP_SAPI != 'cgi-fcgi' ) {
+	        status_header( $status ); // This causes problems on IIS and some FastCGI setups
+	    }
+
+	    header( "Location: $location", true, $status );
+
+	    return true;
+	}
+}
 if( !function_exists('nova_get_changeset_url')) {
 	function nova_get_changeset_url () {
 
@@ -426,10 +445,10 @@ if( !function_exists('nova_get_changeset_url')) {
 			if ($nova_changeset != "default") {
 				$data = array('customize_changeset_uuid'=>$nova_changeset);
 				$queryString =  http_build_query($data);
-				wp_redirect($changeset_url.'?'.$queryString);
+				nova_redirect($changeset_url.'?'.$queryString);
 				exit;
 			}else {
-				wp_redirect($changeset_url);
+				nova_redirect($changeset_url);
 				exit;
 			}
 		}
